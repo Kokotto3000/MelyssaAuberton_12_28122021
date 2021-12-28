@@ -1,3 +1,17 @@
-main{
+.dashboard{
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard_main{
+    display: flex;
+}
+
+.dashboard_charts{
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard_charts div{
     display: flex;
 }

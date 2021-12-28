@@ -1,0 +1,12 @@
+.daily-parameters{
+    display: flex;
+    flex-direction: column;
+}
+
+.daily-parameters_title{
+    display: flex;
+}
+
+.daily-parameters_title ul{
+    display: flex;
+}
