@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.7b1da383.css",
-    "main.js": "/static/js/main.143e16f0.js",
-    "static/media/logo.svg": "/static/media/logo.837414860efdf652f26ae7be654e06c5.svg",
-    "static/media/swim.svg": "/static/media/swim.e26dba434236828a108a786d8215cd31.svg",
-    "static/media/cycle.svg": "/static/media/cycle.d516c0e89dbb3aaab23afac6a130ca06.svg",
-    "static/media/carbs-icon.svg": "/static/media/carbs-icon.aa0e74661df8c71ea59cbe777ac24615.svg",
-    "static/media/fat-icon.svg": "/static/media/fat-icon.82c6cb9fd2b3e6307fca82c2f796ed14.svg",
-    "static/media/protein-icon.svg": "/static/media/protein-icon.c285979616f56dc9dfa457e51c583d68.svg",
-    "static/media/yoga.svg": "/static/media/yoga.6c31a2775a609d06fd5d99eb347250ed.svg",
-    "static/media/calories-icon.svg": "/static/media/calories-icon.5db5a3aff9bd8f441f49792782c8262e.svg",
-    "index.html": "/index.html",
-    "static/media/bodybuilding.svg": "/static/media/bodybuilding.4fe7fb9fe3554121b3d42dcb489eefd0.svg",
-    "main.7b1da383.css.map": "/static/css/main.7b1da383.css.map",
-    "main.143e16f0.js.map": "/static/js/main.143e16f0.js.map"
+    "main.css": "/MelyssaAuberton_12_28122021/static/css/main.7b1da383.css",
+    "main.js": "/MelyssaAuberton_12_28122021/static/js/main.aaf2b868.js",
+    "static/media/logo.svg": "/MelyssaAuberton_12_28122021/static/media/logo.837414860efdf652f26ae7be654e06c5.svg",
+    "static/media/swim.svg": "/MelyssaAuberton_12_28122021/static/media/swim.e26dba434236828a108a786d8215cd31.svg",
+    "static/media/cycle.svg": "/MelyssaAuberton_12_28122021/static/media/cycle.d516c0e89dbb3aaab23afac6a130ca06.svg",
+    "static/media/carbs-icon.svg": "/MelyssaAuberton_12_28122021/static/media/carbs-icon.aa0e74661df8c71ea59cbe777ac24615.svg",
+    "static/media/fat-icon.svg": "/MelyssaAuberton_12_28122021/static/media/fat-icon.82c6cb9fd2b3e6307fca82c2f796ed14.svg",
+    "static/media/protein-icon.svg": "/MelyssaAuberton_12_28122021/static/media/protein-icon.c285979616f56dc9dfa457e51c583d68.svg",
+    "static/media/yoga.svg": "/MelyssaAuberton_12_28122021/static/media/yoga.6c31a2775a609d06fd5d99eb347250ed.svg",
+    "index.html": "/MelyssaAuberton_12_28122021/index.html",
+    "static/media/calories-icon.svg": "/MelyssaAuberton_12_28122021/static/media/calories-icon.5db5a3aff9bd8f441f49792782c8262e.svg",
+    "static/media/bodybuilding.svg": "/MelyssaAuberton_12_28122021/static/media/bodybuilding.4fe7fb9fe3554121b3d42dcb489eefd0.svg",
+    "main.7b1da383.css.map": "/MelyssaAuberton_12_28122021/static/css/main.7b1da383.css.map",
+    "main.aaf2b868.js.map": "/MelyssaAuberton_12_28122021/static/js/main.aaf2b868.js.map"
   },
   "entrypoints": [
     "static/css/main.7b1da383.css",
-    "static/js/main.143e16f0.js"
+    "static/js/main.aaf2b868.js"
   ]
 }
