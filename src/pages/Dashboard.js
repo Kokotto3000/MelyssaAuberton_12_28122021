@@ -13,7 +13,7 @@ function Dashboard() {
             <div className="dashboard_main">
                 <div className='dashboard_charts'>
                     <DailyParameters />
-                    <div>
+                    <div className='dashboard_charts-trio'>
                         <SessionsDurations />
                         <ActivityDetails />
                         <Score />
