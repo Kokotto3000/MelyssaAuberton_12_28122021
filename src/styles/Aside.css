@@ -3,7 +3,6 @@
     flex-flow: column wrap;
     justify-content: space-around;
     background-color: black;
-    height: 100vh;
 }
 
 .aside_nav{

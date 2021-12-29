@@ -1,12 +1,35 @@
 .daily-parameters{
     display: flex;
     flex-direction: column;
+    font-size: 1.5rem;
+    color: #20253A;
+    background-color: #FBFBFB;
+    border-radius: .5rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+    padding: 2rem;
 }
 
 .daily-parameters_title{
     display: flex;
+    justify-content: space-between;
+    
 }
 
 .daily-parameters_title ul{
     display: flex;
+    color: #74798C;
+    font-size: 1.4rem;
+    list-style: none;
+}
+
+.daily-parameters_title li{
+    display: flex;
+    align-items: center;
+}
+
+.daily-parameters_title li::before{
+    content: "•"; 
+    color: red;
+    font-size: 3rem;
+    padding: 1rem;
 }
