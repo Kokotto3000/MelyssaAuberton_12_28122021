@@ -4,7 +4,11 @@ import DailyParameters from "../components/charts/DailyParameters";
 import SessionsDurations from "../components/charts/SessionsDurations";
 import ActivityDetails from "../components/charts/ActivityDetails";
 import Score from "../components/charts/Score";
-import InfosCards from "../components/charts/InfosCards";
+import InfosCard from "../components/InfosCard";
+import calories from "../assets/calories-icon.svg";
+import protein from "../assets/protein-icon.svg";
+import carbs from "../assets/carbs-icon.svg";
+import fat from "../assets/fat-icon.svg";
 
 function Dashboard() {
     return (
@@ -19,7 +23,13 @@ function Dashboard() {
                         <Score />
                     </div>
                 </div>
-                <InfosCards />
+                <div className='dashboard_cards'>
+                    <InfosCard icon={ calories } type="Calories" amount="1,970kCal" />
+                    <InfosCard icon={ protein } type="Proteines" amount="155g" />
+                    <InfosCard icon={ carbs } type="Glucides" amount="290g"/>
+                    <InfosCard icon={ fat } type="Lipides" amount="50g"/>
+                </div>
+                
             </div>
         </section>        
                       
