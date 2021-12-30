@@ -52,21 +52,21 @@ function SessionsDurations() {
             <h2>Durée moyenne des sessions</h2>
             <ResponsiveContainer className='sessions_chart'>
                 <AreaChart
-                // width={250}
-                // height={200}
-                data={data}
-                margin={{
-                    top: 0,
-                    right: 0,
-                    left: 0,
-                    bottom: 0,
-                }}
+                  // width={250}
+                  // height={200}
+                  data={data}
+                  margin={{
+                      top: 0,
+                      right: 0,
+                      left: 0,
+                      bottom: 0,
+                  }}
                 >
-                {/* <CartesianGrid strokeDasharray="3 3" /> */}
-                <XAxis dataKey="name" tickLine={false} axisLine={false} interval={0} maxTickGap={5}/>
-                {/* <YAxis /> */}
-                <Tooltip />
-                <Area type="monotone" dataKey="uv" stroke="white" fill="white" fillOpacity="0.1" />
+                  {/* <CartesianGrid strokeDasharray="3 3" /> */}
+                  <XAxis dataKey="name" tickLine={false} axisLine={false} interval={0} maxTickGap={5}/>
+                  {/* <YAxis /> */}
+                  <Tooltip />
+                  <Area type="monotone" dataKey="uv" stroke="white" fill="white" fillOpacity="0.1" />
                 </AreaChart>
             </ResponsiveContainer>
         </div>
