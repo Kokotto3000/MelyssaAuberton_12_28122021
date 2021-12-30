@@ -1,5 +1,5 @@
 import '../../styles/ActivityDetails.css';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 
 function ActivityDetails() {
     const data = [
@@ -41,23 +41,22 @@ function ActivityDetails() {
         },
       ];
 
-    return(
-        
+    return (   
         <div className='activity'>
-            <div className='activity_chart'>
-                <RadarChart width={250}
-                height={200}
-                margin={{
-                    top: 10,
-                    right: 30,
-                    left: 0,
-                    bottom: 0,
-                }}cx="50%" cy="50%" outerRadius="80%" data={data}>
+            <ResponsiveContainer className='activity_chart'>
+                <RadarChart
+                    // width={250} 
+                    // height={200} 
+                    // margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
+                    // cx="50%" 
+                    // cy="100%" 
+                    outerRadius="60%" 
+                    data={data}>
                 <PolarGrid />
-                <PolarAngleAxis dataKey="subject" />
-                <Radar name="Mike" dataKey="A" fill="red" fillOpacity={0.7} />
+                <PolarAngleAxis className="activity_chart-subject" dataKey="subject" />
+                <Radar name="Thomas" dataKey="A" fill="red" fillOpacity={0.7} />
                 </RadarChart>
-            </div>
+            </ResponsiveContainer>
         </div>
         
         
