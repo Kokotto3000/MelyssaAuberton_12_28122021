@@ -1,9 +1,9 @@
 import '../styles/Banner.css';
 
-function Banner() {
+function Banner(props) {
     return(
         <div className='banner'>
-            <h1>Bonjour <span>Thomas</span></h1>
+            <h1>Bonjour <span>{ props.firstName }</span></h1>
             <p>Félicitations ! Vous avez explosé vos objectifs hier 👏</p>
         </div>        
     );

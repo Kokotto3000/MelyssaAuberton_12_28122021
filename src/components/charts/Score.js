@@ -11,7 +11,8 @@ function Score() {
         <div className='score'>
             <h2>Score</h2>            
 
-            <PieChart className="score-chart" 
+            <PieChart 
+                className="score-chart" 
                 width={250}
                 height={200}
                 background={true}
@@ -25,13 +26,12 @@ function Score() {
                 
                 <Pie
                     data={data}
-                    // dataKey="value"
+                    dataKey= "value"
                     outerRadius="90%"
                     fill="white"
-                    // startAngle={90}
-                    // endAngle={-270}
+                    startAngle={90}
+                    endAngle={-270}
                     paddingAngle={0}
-                    // cornerRadius={50}
                 >
                     
                 </Pie>
@@ -42,7 +42,7 @@ function Score() {
                     outerRadius="100%"
                     fill="red"
                     startAngle={90}
-                    endAngle={-270}
+                    endAngle={-360}
                     paddingAngle={0}
                     cornerRadius={50}
                 >
@@ -60,24 +60,24 @@ function Score() {
                         x={125}
                         y={100}
                             fill='#282D30'
-                            font-weight="bold"
-                            font-size="2.6rem">
+                            fontWeight="bold"
+                            fontSize="2.6rem">
                             12%
                     </tspan>
                     <tspan
                         x={125}
                         y={126}
                         fill='#74798C'
-                        font-weight="normal"
-                        font-size="2rem">
+                        fontWeight="normal"
+                        fontSize="2rem">
                             de votre
                     </tspan>
                     <tspan
                         x={125}
                         y={152}
                         fill='#74798C'
-                        font-weight="normal"
-                        font-size="2rem">
+                        fontWeight="normal"
+                        fontSize="2rem">
                             objectif
                     </tspan>
                 </text>                

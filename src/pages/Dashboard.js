@@ -10,10 +10,11 @@ import protein from "../assets/protein-icon.svg";
 import carbs from "../assets/carbs-icon.svg";
 import fat from "../assets/fat-icon.svg";
 
-function Dashboard() {
+function Dashboard(props) {
     return (
+        console.log(props.userDatas),        
         <section className='dashboard'>
-            <Banner />
+            <Banner firstName={ props.userDatas.userInfos.firstName } />
             <div className="dashboard_main">
                 <div className='dashboard_charts'>
                     <DailyParameters />
