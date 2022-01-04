@@ -5,6 +5,7 @@ import SessionsDurations from "../components/charts/SessionsDurations";
 import ActivityDetails from "../components/charts/ActivityDetails";
 import Score from "../components/charts/Score";
 import InfosCard from "../components/InfosCard";
+import Loader from '../components/Loader';
 import calories from "../assets/calories-icon.svg";
 import protein from "../assets/protein-icon.svg";
 import carbs from "../assets/carbs-icon.svg";
@@ -19,39 +20,47 @@ function Dashboard() {
     const userIdInt = parseInt(userId.id);
 
     const [ userDatas, setUserDatas ]= useState({});
+    const [ isDataLoading, setDataLoading]= useState(false);
 
     useEffect(()=> {
-        UserDatas(userIdInt)
+        setDataLoading(true);
+        UserDatas(userIdInt, "user")
         .then((data) => { 
             setUserDatas(data);
+            setDataLoading(false);
         })
         .catch((error)=> console.log(error))
         }, [userIdInt]);
 
     return (
-        console.log(userDatas),
         <section className='dashboard'>
-            <Banner firstName="Thomas" />
-            <div className="dashboard_main">
-                <div className='dashboard_charts'>
-                    <DailyParameters />
-                    <div className='dashboard_charts-trio'>
-                        <SessionsDurations />
-                        <ActivityDetails />
-                        <Score />
+            { isDataLoading ? (
+                <Loader />
+            ) : (
+                
+                <div>
+                    <Banner firstName="Thomas" />
+                    <div className="dashboard_main">
+                        <div className='dashboard_charts'>
+                            <DailyParameters />
+                            <div className='dashboard_charts-trio'>
+                                <SessionsDurations id={ userIdInt } />
+                                <ActivityDetails id={ userIdInt } />
+                                <Score id={ userIdInt } />
+                            </div>
+                        </div>
+                        <div className='dashboard_cards'>
+                            <InfosCard icon={ calories } type="Calories" amount="1,970kCal" />
+                            <InfosCard icon={ protein } type="Proteines" amount="155g" />
+                            <InfosCard icon={ carbs } type="Glucides" amount="290g" />
+                            <InfosCard icon={ fat } type="Lipides" amount="50g" />
+                        </div>
+                        
                     </div>
                 </div>
-                <div className='dashboard_cards'>
-                    <InfosCard icon={ calories } type="Calories" amount="1,970kCal" />
-                    <InfosCard icon={ protein } type="Proteines" amount="155g" />
-                    <InfosCard icon={ carbs } type="Glucides" amount="290g"/>
-                    <InfosCard icon={ fat } type="Lipides" amount="50g"/>
-                </div>
-                
-            </div>
-        </section>        
-                      
-    );
+            )}
+        </section>
+    )
 }
 
 export default Dashboard;

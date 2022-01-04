@@ -9,28 +9,8 @@ import Aside from "./components/Aside";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 
-// import React, { useEffect, useState } from 'react';
-// import { useParams } from "react-router-dom";
-
-// import UserDatas from './services/UserDatas';
-
-function App() {
-    // console.log(useParams());
-    
-    // const [ userDatas, setUserDatas ]= useState({});
-
-    // useEffect(()=> {
-    //     UserDatas()
-    //     .then((data) => { 
-    //         setUserDatas(data);
-    //     })
-    //     .catch((error)=> console.log(error))
-    //     }, []);
-   
+function App() {   
     return (
-        
-        // console.log(userDatas.data),
-
         <BrowserRouter>
             <Header />
             
