@@ -10,7 +10,7 @@ function NotFound() {
             </div>
             
 
-            <Link to="/id" className="not-found_link">
+            <Link to="/12" className="not-found_link">
                 Essayer plutôt avec ce compte...
             </Link>
         </section>            

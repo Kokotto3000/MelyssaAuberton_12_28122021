@@ -9,25 +9,27 @@ import Aside from "./components/Aside";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
+// import { useParams } from "react-router-dom";
 
-import UserDatas from './services/UserDatas';
+// import UserDatas from './services/UserDatas';
 
 function App() {
+    // console.log(useParams());
+    
+    // const [ userDatas, setUserDatas ]= useState({});
 
-    const [ userDatas, setUserDatas ]= useState({});
-
-    useEffect(()=> {
-        UserDatas()
-        .then((data) => { 
-            setUserDatas(data);
-        })
-        .catch((error)=> console.log(error))
-        }, []);
+    // useEffect(()=> {
+    //     UserDatas()
+    //     .then((data) => { 
+    //         setUserDatas(data);
+    //     })
+    //     .catch((error)=> console.log(error))
+    //     }, []);
    
     return (
-
-        console.log(userDatas.data),
+        
+        // console.log(userDatas.data),
 
         <BrowserRouter>
             <Header />
@@ -36,7 +38,7 @@ function App() {
                 <Aside />
                 
                 <Routes>
-                    <Route exact path="/:id" element={<Dashboard userDatas={userDatas.data} />} />
+                    <Route exact path="/:id" element={<Dashboard />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>                
             </main>  

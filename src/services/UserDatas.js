@@ -1,6 +1,6 @@
 // import { useEffect, useState } from 'react';
 
-function UserDatas(){
+function UserDatas(id){
     // const [ userDatas, setUserDatas ]= useState({});
 
     // useEffect(()=> {
@@ -12,7 +12,7 @@ function UserDatas(){
     //             .catch((error)=> console.log(error))
     //     }, []);
 
-    return fetch(`http://localhost:3000/user/18`)
+    return fetch(`http://localhost:3000/user/${id}`)
     .then(data => data.json())
 }
 

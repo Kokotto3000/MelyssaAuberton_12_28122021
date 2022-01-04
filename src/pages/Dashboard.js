@@ -10,11 +10,28 @@ import protein from "../assets/protein-icon.svg";
 import carbs from "../assets/carbs-icon.svg";
 import fat from "../assets/fat-icon.svg";
 
-function Dashboard(props) {
+import React, { useEffect, useState } from 'react';
+import { useParams } from "react-router-dom";
+import UserDatas from '../services/UserDatas';
+
+function Dashboard() {
+    const userId= useParams();
+    const userIdInt = parseInt(userId.id);
+
+    const [ userDatas, setUserDatas ]= useState({});
+
+    useEffect(()=> {
+        UserDatas(userIdInt)
+        .then((data) => { 
+            setUserDatas(data);
+        })
+        .catch((error)=> console.log(error))
+        }, [userIdInt]);
+
     return (
-        console.log(props.userDatas),        
+        console.log(userDatas),
         <section className='dashboard'>
-            <Banner firstName={ props.userDatas.userInfos.firstName } />
+            <Banner firstName="Thomas" />
             <div className="dashboard_main">
                 <div className='dashboard_charts'>
                     <DailyParameters />
