@@ -4,48 +4,45 @@ import { AreaChart, Area, Tooltip, ResponsiveContainer, XAxis } from 'recharts';
 function SessionsDurations() {
     const data = [
         {
-          name: 'L',
-          uv: 4000,
-          pv: 2400,
-          amt: 2400,
+          day: 1,
+          sessionLength: 30,
         },
         {
-          name: 'M',
-          uv: 3000,
-          pv: 1398,
-          amt: 2210,
+          day: 2,
+          sessionLength: 23,
         },
         {
-          name: 'M',
-          uv: 2000,
-          pv: 9800,
-          amt: 2290,
+          day: 3,
+          sessionLength: 45,
         },
         {
-          name: 'J',
-          uv: 2780,
-          pv: 3908,
-          amt: 2000,
+          day: 4,
+          sessionLength: 50,
         },
         {
-          name: 'V',
-          uv: 1890,
-          pv: 4800,
-          amt: 2181,
+          day: 5,
+          sessionLength: 0,
         },
         {
-          name: 'S',
-          uv: 2390,
-          pv: 3800,
-          amt: 2500,
+          day: 6,
+          sessionLength: 0,
         },
         {
-          name: 'D',
-          uv: 3490,
-          pv: 4300,
-          amt: 2100,
-        },
+          day: 7,
+          sessionLength: 60,
+        }
       ];
+
+      // const switchDays= ()=>{
+      //     switch(data.day) {
+      //         case '1':
+      //           return 'L';
+      //         default:
+      //           return 'foo';
+      //     };
+      // }
+
+      // console.log(switchDays);
 
     return(
         <div className='sessions'>
@@ -63,10 +60,10 @@ function SessionsDurations() {
                   }}
                 >
                   {/* <CartesianGrid strokeDasharray="3 3" /> */}
-                  <XAxis dataKey="name" tickLine={false} axisLine={false} interval={0} maxTickGap={5}/>
+                  <XAxis dataKey="day" tickLine={false} axisLine={false} interval={0} maxTickGap={5}/>
                   {/* <YAxis /> */}
                   <Tooltip />
-                  <Area type="monotone" dataKey="uv" stroke="white" fill="white" fillOpacity="0.1" />
+                  <Area type="monotone" dataKey="sessionLength" stroke="white" fill="white" fillOpacity="0.1" />
                 </AreaChart>
             </ResponsiveContainer>
         </div>
