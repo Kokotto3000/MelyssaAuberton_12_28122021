@@ -30,35 +30,38 @@ function Dashboard() {
             setDataLoading(false);
         })
         .catch((error)=> console.log(error))
-        }, [userIdInt]);
+    }, [userIdInt]);
 
     return (
         <section className='dashboard'>
             { isDataLoading ? (
-                <Loader />
-            ) : (
+                    <Loader />
+                ) : (
                 
-                <div>
-                    <Banner firstName="Thomas" />
-                    <div className="dashboard_main">
-                        <div className='dashboard_charts'>
-                            <DailyParameters />
-                            <div className='dashboard_charts-trio'>
-                                <SessionsDurations id={ userIdInt } />
-                                <ActivityDetails id={ userIdInt } />
-                                <Score id={ userIdInt } />
+                    <div>
+                        <Banner firstName="Thomas" />
+                        <div className="dashboard_main">
+                            <div className='dashboard_charts'>
+                                <DailyParameters />
+                                <div className='dashboard_charts-trio'>
+                                    <SessionsDurations id={ userIdInt } />
+                                    <ActivityDetails id={ userIdInt } />
+                                    <Score id={ userIdInt } />
+                                </div>
                             </div>
+                            <div className='dashboard_cards'>
+                                {/* <InfosCard icon={ calories } type="Calories" amount={`${userDatas.data.keyData.calorieCount.toLocaleString('en-US')}kCal`} /> */}
+                                <InfosCard icon={ calories } type="Calories" amount="1,930kCal" />
+                                
+                                <InfosCard icon={ protein } type="Proteines" amount="155g" />
+                                <InfosCard icon={ carbs } type="Glucides" amount="290g" />
+                                <InfosCard icon={ fat } type="Lipides" amount="50g" />
+                            </div>
+                            
                         </div>
-                        <div className='dashboard_cards'>
-                            <InfosCard icon={ calories } type="Calories" amount="1,970kCal" />
-                            <InfosCard icon={ protein } type="Proteines" amount="155g" />
-                            <InfosCard icon={ carbs } type="Glucides" amount="290g" />
-                            <InfosCard icon={ fat } type="Lipides" amount="50g" />
-                        </div>
-                        
                     </div>
-                </div>
-            )}
+                )
+            }
         </section>
     )
 }

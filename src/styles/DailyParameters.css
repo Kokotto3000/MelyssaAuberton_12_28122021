@@ -41,3 +41,11 @@
     font-size: 3rem;
     padding: 1rem;
 }
+
+.daily-parameters_tooltip{
+    background-color: red;
+    color: white;
+    font-size: .7rem;
+    font-weight: 500;
+    padding: 1rem;
+}

@@ -62,12 +62,26 @@ function SessionsDurations() {
                   {/* <CartesianGrid strokeDasharray="3 3" /> */}
                   <XAxis dataKey="day" tickLine={false} axisLine={false} interval={0} maxTickGap={5}/>
                   {/* <YAxis /> */}
-                  <Tooltip />
-                  <Area type="monotone" dataKey="sessionLength" stroke="white" fill="white" fillOpacity="0.1" />
+                  <Tooltip content={<CustomTooltip />} />
+                  <Area type="monotone" dataKey="sessionLength" stroke="white" strokeWidth="2" fill="white" fillOpacity="0.1" />
                 </AreaChart>
             </ResponsiveContainer>
         </div>
     );
+}
+
+function CustomTooltip({active, payload}){
+  
+    if(active){
+      // console.log(payload[0].payload.sessionLength)
+        return(
+            <div className="sessions_tooltip">
+                <p>{payload[0].payload.sessionLength} min</p>
+            </div>
+        )
+    }
+
+    return null;
 }
 
 export default SessionsDurations;
