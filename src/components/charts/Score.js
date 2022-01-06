@@ -1,10 +1,10 @@
 import { PieChart, Pie, Cell } from 'recharts';
 import '../../styles/Score.css';
 
-function Score() {
+function Score(props) {
     const data = [
-        { id: "1", name: "L1", value: 75 },
-        { id: "2", name: "L2", value: 25 }
+        { id: "1", name: "L1", value: 100 },
+        { id: "2", name: "L2", value: props.score * 100 }
         ];
       
     return(
@@ -30,7 +30,7 @@ function Score() {
                     outerRadius="90%"
                     fill="white"
                     startAngle={90}
-                    endAngle={-270}
+                    // endAngle={-270}
                     paddingAngle={0}
                 >
                     
@@ -62,7 +62,7 @@ function Score() {
                             fill='#282D30'
                             fontWeight="bold"
                             fontSize="2.6rem">
-                            12%
+                            {props.score * 100} %
                     </tspan>
                     <tspan
                         x={125}

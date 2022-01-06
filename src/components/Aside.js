@@ -9,21 +9,21 @@ function Aside() {
     return (
         <aside className="aside">
             <nav className="aside_nav">
-                <Link className="aside_nav-link" to="/yoga">
+                <Link className="aside_nav-link" to="/id/yoga">
                     <img className="aside_logo" src={ yoga } alt="logo Yoga" />
                 </Link>
-                <Link className="aside_nav-link" to="/swim">
+                <Link className="aside_nav-link" to="/id/swim">
                     <img className="aside_logo" src={ swim } alt="logo Swim" />
                 </Link>
-                <Link className="aside_nav-link" to="/cycle">
+                <Link className="aside_nav-link" to="/id/cycle">
                     <img className="aside_logo" src={ cycle } alt="logo Cycle" />
                 </Link>
-                <Link className="aside_nav-link" to="/bodybuilding">
+                <Link className="aside_nav-link" to="/id/bodybuilding">
                     <img className="aside_logo" src={ bodybuilding } alt="logo Bodybuilding" />
                 </Link>
             </nav>
 
-            <Link className='aside_copy' to="/">Copyright, SportSee 2020</Link>            
+            <Link className='aside_copy' to="/id">Copyright, SportSee 2020</Link>            
         </aside>);
 }
 
