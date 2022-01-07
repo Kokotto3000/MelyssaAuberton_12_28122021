@@ -61,13 +61,13 @@ function DailyParameters() {
                     <CartesianGrid strokeDasharray="3 3" vertical={ false } />
                     {/* <XAxis dataKey="day" tickFormatter={monthTickFormatter} tickLine={false} /> */}
                     <XAxis dataKey="day" tickLine={false} />
-                    <YAxis orientation="right" axisLine={ false } tickLine={ false } tickCount={ 3 } />
-                    {/* <YAxis yAxisId="left" orientation="left" axisLine={ false } tickLine={ false } tickCount={ 1 } /> */}
+                    <YAxis yAxisId="kilogram" orientation="right" axisLine={ false } tickLine={ false } tickCount={ 3 } domain={['dataMin', 'auto']} />
+                    <YAxis yAxisId="calories" orientation="left" axisLine={ false } tickLine={ false } tickCount={ 3 } hide={true} />
                     
                     <Tooltip content={<CustomTooltip />} />
                     {/* <Legend verticalAlign="top" /> */}
-                    <Bar name="Poids (kg)" dataKey="kilogram" fill="#282D30"  radius={[ 20, 20, 0, 0 ]} />
-                    <Bar name="Calories brulées (kCal)" dataKey="calories" fill="#E60000"  radius={[ 20, 20, 0, 0 ]} />                                   
+                    <Bar yAxisId="kilogram" name="Poids (kg)" dataKey="kilogram" fill="#282D30"  radius={[ 20, 20, 0, 0 ]} />
+                    <Bar yAxisId="calories" name="Calories brulées (kCal)" dataKey="calories" fill="#E60000"  radius={[ 20, 20, 0, 0 ]} />                                   
                 </BarChart>
             </ResponsiveContainer>            
         </div>

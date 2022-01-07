@@ -53,29 +53,13 @@ function Dashboard() {
     const userId= useParams();
     const userIdInt = parseInt(userId.id);
 
-    const [ userDatas, setUserDatas ]= useState({
-        data: { 
-            id: 13,
-            userInfos: {
-                firstName: 'Thomas',
-                lastName: 'Doe',
-                age: 28,
-            },
-            todayScore: 0.12,
-            keyData: {
-                calorieCount: 1930,
-                proteinCount: 155,
-                carbohydrateCount: 290,
-                lipidCount: 50
-            } 
-        }
-    });
+    const [ userDatas, setUserDatas ]= useState({});
 
     const [ isDataLoading, setDataLoading]= useState(false);
 
     useEffect(()=> {
         setDataLoading(true);
-        UserDatas(userIdInt, "user")
+        UserDatas(userIdInt)
         .then((data) => { 
             setUserDatas(data);
             setDataLoading(false);

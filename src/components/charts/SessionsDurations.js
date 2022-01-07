@@ -1,8 +1,12 @@
 import '../../styles/SessionsDurations.css';
-import { AreaChart, Area, Tooltip, ResponsiveContainer, XAxis } from 'recharts';
+import { LineChart, Line, Tooltip, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 
 function SessionsDurations() {
     const data = [
+        {
+          day: "",
+          sessionLength: 50,
+        },
         {
           day: "L",
           sessionLength: 30,
@@ -30,6 +34,10 @@ function SessionsDurations() {
         {
           day: "D",
           sessionLength: 60,
+        },
+        {
+          day: "",
+          sessionLength: 50,
         }
       ];
 
@@ -48,23 +56,29 @@ function SessionsDurations() {
         <div className='sessions'>
             <h2>Durée moyenne des sessions</h2>
             <ResponsiveContainer className='sessions_chart'>
-                <AreaChart
+                <LineChart
                   // width={250}
                   // height={200}
                   data={data}
                   margin={{
-                      top: 0,
-                      right: 0,
-                      left: 0,
-                      bottom: 0,
+                    top: 5,
+                    right: -15,
+                    left: -15,
+                    bottom: 5,
                   }}
                 >
                   {/* <CartesianGrid strokeDasharray="3 3" /> */}
-                  <XAxis dataKey="day" tickLine={false} axisLine={false} interval={0} maxTickGap={5}/>
-                  {/* <YAxis /> */}
+                  <XAxis margin={{
+                    top: 5,
+                    right: 10,
+                    left: 10,
+                    bottom: 5,
+                  }} 
+                  dataKey="day" tickLine={false} axisLine={false} interval={0} maxTickGap={5} stroke="rgba(255, 255, 255, 0.6)" tick={{ fontSize: 14, fill: "rgba(255, 255, 255, 0.5)"}} />
+                  <YAxis domain={[-30, "dataMax+30"]} hide={true} />
                   <Tooltip content={<CustomTooltip />} />
-                  <Area type="monotone" dataKey="sessionLength" stroke="white" strokeWidth="2" fill="white" fillOpacity="0.1" />
-                </AreaChart>
+                  <Line type="natural" dataKey="sessionLength" stroke="rgba(255, 255, 255, 0.6)" strokeWidth={3} dot={false} activeDot={{ stroke: '#FFFFFF33', strokeWidth: 10, r: 5 }} />
+                </LineChart>
             </ResponsiveContainer>
         </div>
     );
