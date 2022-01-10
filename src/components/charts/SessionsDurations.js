@@ -75,7 +75,7 @@ function SessionsDurations() {
                     bottom: 5,
                   }} 
                   dataKey="day" tickLine={false} axisLine={false} interval={0} maxTickGap={5} stroke="rgba(255, 255, 255, 0.6)" tick={{ fontSize: 14, fill: "rgba(255, 255, 255, 0.5)"}} />
-                  <YAxis domain={[-30, "dataMax+30"]} hide={true} />
+                  <YAxis domain={[-30, "dataMax + 30"]} hide={true} />
                   <Tooltip content={<CustomTooltip />} />
                   <Line type="natural" dataKey="sessionLength" stroke="rgba(255, 255, 255, 0.6)" strokeWidth={3} dot={false} activeDot={{ stroke: '#FFFFFF33', strokeWidth: 10, r: 5 }} />
                 </LineChart>

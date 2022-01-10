@@ -1,7 +1,7 @@
 import '../../styles/ActivityDetails.css';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 
-function ActivityDetails() {
+function ActivityDetails(props) {
     const data = [
         {
           kind: 'Intensité',
@@ -30,6 +30,7 @@ function ActivityDetails() {
       ];
 
     return (   
+
         <div className='activity'>
             <ResponsiveContainer className='activity_chart'>
                 <RadarChart

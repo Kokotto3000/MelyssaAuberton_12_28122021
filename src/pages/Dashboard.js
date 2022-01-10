@@ -57,51 +57,60 @@ function Dashboard() {
 
     const [ isDataLoading, setDataLoading]= useState(false);
 
+    const [ isError, setIsError ]= useState(true);
+
     useEffect(()=> {
         setDataLoading(true);
         UserDatas(userIdInt)
-        .then((data) => { 
-            setUserDatas(data);
+        .then(data => {
+            console.log(data);
+            if(!data){                
+                setIsError(true);
+                const error= "error"
+                throw error;
+            }
+            setIsError(false);
+            setUserDatas(data);            
+        })
+        .catch(error=> {
+            console.log(error);            
+        })
+        .finally(()=>{
             setDataLoading(false);
         })
-        .catch((error)=> console.log(error))
     }, [userIdInt]);
 
-    if(!userDatas.data) return <NotFound />;
+    console.log(isError);
+
+    if(isDataLoading) return <Loader />;
+
+    if(isError) return <NotFound />;
 
     return (
+        
         <section className='dashboard'>
-            { isDataLoading ? ( 
-                               
-                <Loader />  
-                    
-                ) : (       
-                    
-                    console.log(userDatas),
-
-                    <div>
-                        <Banner firstName={userDatas.data.userInfos.firstName} />
-                        <div className="dashboard_main">
-                            <div className='dashboard_charts'>
-                                <DailyParameters />
-                                <div className='dashboard_charts-trio'>
-                                    <SessionsDurations id={ userIdInt } />
-                                    <ActivityDetails id={ userIdInt } />
-                                    <Score score={ userDatas.data.todayScore } />
-                                </div>
-                            </div>
-                            <div className='dashboard_cards'>
-                                <InfosCard icon={ calories } type="Calories" amount={`${userDatas.data.keyData.calorieCount.toLocaleString('en-US')}kCal`} />                              
-                                <InfosCard icon={ protein } type="Proteines" amount={`${userDatas.data.keyData.proteinCount}g`} />
-                                <InfosCard icon={ carbs } type="Glucides" amount={`${userDatas.data.keyData.carbohydrateCount}g`} />
-                                <InfosCard icon={ fat } type="Lipides" amount={`${userDatas.data.keyData.lipidCount}g`} />
-                            </div>
-                            
+            <div>
+                <Banner firstName={userDatas.data.userInfos.firstName} />
+                <div className="dashboard_main">
+                    <div className='dashboard_charts'>
+                        <DailyParameters id={ userIdInt } />
+                        <div className='dashboard_charts-trio'>
+                            <SessionsDurations id={ userIdInt } />
+                            <ActivityDetails id={ userIdInt } />
+                            <Score score={ userDatas.data.todayScore } />
                         </div>
                     </div>
-                )
-            }
+                    <div className='dashboard_cards'>
+                        <InfosCard icon={ calories } type="Calories" amount={`${userDatas.data.keyData.calorieCount.toLocaleString('en-US')}kCal`} />                              
+                        <InfosCard icon={ protein } type="Proteines" amount={`${userDatas.data.keyData.proteinCount}g`} />
+                        <InfosCard icon={ carbs } type="Glucides" amount={`${userDatas.data.keyData.carbohydrateCount}g`} />
+                        <InfosCard icon={ fat } type="Lipides" amount={`${userDatas.data.keyData.lipidCount}g`} />
+                    </div>
+                    
+                </div>
+            </div>
         </section>
+        
     )
 }
 

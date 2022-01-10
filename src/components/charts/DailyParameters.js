@@ -1,7 +1,9 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import '../../styles/DailyParameters.css';
+import UserActivity from '../../services/UserActivity';
+import React, { useEffect, useState } from 'react';
 
-function DailyParameters() {
+function DailyParameters(props) {
     const data = [
         {
           day: "1",
@@ -45,6 +47,17 @@ function DailyParameters() {
       
       //   return day.getDay() + 1;
       // };
+
+    //   const [userActivity, setUserActivity]= useState({});
+
+
+    //   useEffect(()=> {
+    //     UserActivity(props.id)
+    //     .then(data => { 
+    //         setUserActivity(data);
+    //     })
+    //     .catch(error=> console.log(error))
+    // }, [props.id, userActivity]);
 
     return(
         <div className='daily-parameters'>
