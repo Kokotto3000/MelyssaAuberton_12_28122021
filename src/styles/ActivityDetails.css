@@ -3,7 +3,9 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
     border-radius: 5px;
     flex-basis: 30%;
-    min-width: 25.8rem;
+    /* width: 18vw;
+    height: 18vw; */
+    /* min-width: 25.8rem; */
 }
 
 .activity_chart{

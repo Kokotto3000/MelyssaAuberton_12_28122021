@@ -1,65 +1,41 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import '../../styles/DailyParameters.css';
-import UserActivity from '../../services/UserActivity';
+import FetchData from '../../services/FetchData';
 import React, { useEffect, useState } from 'react';
 
 function DailyParameters(props) {
-    const data = [
-        {
-          day: "1",
-          kilogram: 80,
-          calories: 240,
-        },
-        {
-          day: "2",
-          kilogram: 80,
-          calories: 220,
-        },
-        {
-          day: "3",
-          kilogram: 81,
-          calories: 280,
-        },
-        {
-          day: "4",
-          kilogram: 81,
-          calories: 290,
-        },
-        {
-          day: "5",
-          kilogram: 80,
-          calories: 160,
-        },
-        {
-          day: "6",
-          kilogram: 78,
-          calories: 162,
-        },
-        {
-          day: "7",
-          kilogram: 76,
-          calories: 390,
-        }
-      ];
-      
-      // const monthTickFormatter = (tick) => {
-      //   const day = new Date(tick);
-      
-      //   return day.getDay() + 1;
-      // };
 
-    //   const [userActivity, setUserActivity]= useState({});
+    const [ userActivity, setUserActivity ]= useState({});
 
+    const [ isDataLoading, setDataLoading]= useState(false);
 
-    //   useEffect(()=> {
-    //     UserActivity(props.id)
-    //     .then(data => { 
-    //         setUserActivity(data);
-    //     })
-    //     .catch(error=> console.log(error))
-    // }, [props.id, userActivity]);
+    const [ isError, setIsError ]= useState(true);
+
+    useEffect(()=> {
+        setDataLoading(true);
+        const ApiCall= new FetchData(props.id);
+        ApiCall.fetchUserActivity()
+        .then(data => {
+            // console.log(data);
+            if(!data){                
+                setIsError(true);
+                const error= "data loading error";
+                throw error;
+            }
+            setIsError(false);
+            setUserActivity(data);
+            }
+        )
+        .catch(error=> {
+            console.log(error);            
+        })
+        .finally(()=>{
+            setDataLoading(false);
+        })
+    }, [props.id]);
 
     return(
+        console.log(userActivity),
         <div className='daily-parameters'>
             <div className='daily-parameters_title'>
                 <h2>Activité quotidienne</h2>
@@ -70,12 +46,12 @@ function DailyParameters(props) {
             </div>
 
             <ResponsiveContainer className='daily-parameters_chart'>              
-                <BarChart data={data} barCategoryGap={40} barGap={5} >                  
+                <BarChart data={userActivity.sessions} barGap={8} barSize={7} >                  
                     <CartesianGrid strokeDasharray="3 3" vertical={ false } />
                     {/* <XAxis dataKey="day" tickFormatter={monthTickFormatter} tickLine={false} /> */}
                     <XAxis dataKey="day" tickLine={false} />
-                    <YAxis yAxisId="kilogram" orientation="right" axisLine={ false } tickLine={ false } tickCount={ 3 } domain={['dataMin', 'auto']} />
-                    <YAxis yAxisId="calories" orientation="left" axisLine={ false } tickLine={ false } tickCount={ 3 } hide={true} />
+                    <YAxis yAxisId="kilogram" orientation="right" axisLine={ false } tickLine={ false } ticks={ userActivity.ticks } domain={['dataMin', 'dataMax']} />
+                    <YAxis yAxisId="calories" orientation="left" axisLine={ false } tickLine={ false } hide={true} domain={['dataMin - 100', 'dataMax + 100']}/>
                     
                     <Tooltip content={<CustomTooltip />} />
                     {/* <Legend verticalAlign="top" /> */}
@@ -89,6 +65,7 @@ function DailyParameters(props) {
 }
 
 function CustomTooltip({active, payload}){
+    // console.log(payload)
     if(active){
         return (
             <div className="daily-parameters_tooltip">

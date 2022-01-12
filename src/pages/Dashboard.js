@@ -13,41 +13,8 @@ import fat from "../assets/fat-icon.svg";
 
 import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
-import UserDatas from '../services/UserDatas';
+import FetchData from '../services/FetchData';
 import NotFound from './NotFound';
-
-// const USER_MAIN_DATA = [
-//     {
-//         id: 12,
-//         userInfos: {
-//             firstName: 'Karl',
-//             lastName: 'Dovineau',
-//             age: 31,
-//         },
-//         todayScore: 0.12,
-//         keyData: {
-//             calorieCount: 1930,
-//             proteinCount: 155,
-//             carbohydrateCount: 290,
-//             lipidCount: 50
-//         }
-//     },
-//     {
-//         id: 18,
-//         userInfos: {
-//             firstName: 'Cecilia',
-//             lastName: 'Ratorez',
-//             age: 34,
-//         },
-//         score: 0.3,
-//         keyData: {
-//             calorieCount: 2500,
-//             proteinCount: 90,
-//             carbohydrateCount: 150,
-//             lipidCount: 120
-//         }
-//     }
-// ]
 
 function Dashboard() {
     const userId= useParams();
@@ -61,17 +28,18 @@ function Dashboard() {
 
     useEffect(()=> {
         setDataLoading(true);
-        UserDatas(userIdInt)
+        const ApiCall= new FetchData(userIdInt);
+        ApiCall.fetchUserDatas()
         .then(data => {
-            console.log(data);
             if(!data){                
                 setIsError(true);
-                const error= "error"
+                const error= "data loading error";
                 throw error;
             }
             setIsError(false);
-            setUserDatas(data);            
-        })
+            setUserDatas(data);
+            }
+        )
         .catch(error=> {
             console.log(error);            
         })
@@ -79,8 +47,6 @@ function Dashboard() {
             setDataLoading(false);
         })
     }, [userIdInt]);
-
-    console.log(isError);
 
     if(isDataLoading) return <Loader />;
 
@@ -90,27 +56,26 @@ function Dashboard() {
         
         <section className='dashboard'>
             <div>
-                <Banner firstName={userDatas.data.userInfos.firstName} />
+                <Banner firstName={userDatas.firstName} />
                 <div className="dashboard_main">
                     <div className='dashboard_charts'>
                         <DailyParameters id={ userIdInt } />
                         <div className='dashboard_charts-trio'>
                             <SessionsDurations id={ userIdInt } />
                             <ActivityDetails id={ userIdInt } />
-                            <Score score={ userDatas.data.todayScore } />
+                            <Score score={ userDatas.score } />
                         </div>
                     </div>
                     <div className='dashboard_cards'>
-                        <InfosCard icon={ calories } type="Calories" amount={`${userDatas.data.keyData.calorieCount.toLocaleString('en-US')}kCal`} />                              
-                        <InfosCard icon={ protein } type="Proteines" amount={`${userDatas.data.keyData.proteinCount}g`} />
-                        <InfosCard icon={ carbs } type="Glucides" amount={`${userDatas.data.keyData.carbohydrateCount}g`} />
-                        <InfosCard icon={ fat } type="Lipides" amount={`${userDatas.data.keyData.lipidCount}g`} />
+                        <InfosCard icon={ calories } type="Calories" amount={`${userDatas.calorieCount}kCal`} />                              
+                        <InfosCard icon={ protein } type="Proteines" amount={`${userDatas.proteinCount}g`} />
+                        <InfosCard icon={ carbs } type="Glucides" amount={`${userDatas.carbohydrateCount}g`} />
+                        <InfosCard icon={ fat } type="Lipides" amount={`${userDatas.lipidCount}g`} />
                     </div>
                     
                 </div>
             </div>
-        </section>
-        
+        </section>        
     )
 }
 

@@ -7,8 +7,9 @@
     border-radius: .5rem;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
     padding: 2rem;
-    flex-basis: 25%;
-    min-width: 25.8rem;
+    /* flex-basis: 25%;
+    min-width: 25.8rem; */
+    height: 50%;
 }
 
 .daily-parameters_chart{
@@ -40,6 +41,10 @@
     color: red;
     font-size: 3rem;
     padding: 1rem;
+}
+
+.daily-parameters_title li:first-child::before{
+    color: #282D30;
 }
 
 .daily-parameters_tooltip{

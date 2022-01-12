@@ -2,10 +2,11 @@
     background: #FBFBFB;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
     border-radius: 5px;
-    flex-basis: 25%;
     color: #20253A;
-    padding: 2rem;
+    /* padding: 2rem; */
     flex-basis: 30%;
+    /* width: 18vw;
+    height: 18vw; */
 }
 
 .score h2{

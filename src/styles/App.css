@@ -1,4 +1,9 @@
+body{
+    height: 100vh;
+}
+
 main{
     display: flex;
     align-items: stretch;
+    /* height: 100vh; */
 }

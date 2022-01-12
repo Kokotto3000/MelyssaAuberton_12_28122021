@@ -2,11 +2,12 @@
     background: #FF0000;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
     border-radius: 5px;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     flex-basis: 30%;
-    /* width: 20vw;
-    height: 20vw; */
+    /* width: 18vw;
+    height: 18vw; */
+    position: relative;
 }
 
 .sessions_chart{
@@ -22,6 +23,9 @@
     font-size: 1.5rem;
     font-weight: 500;
     padding: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /* .sessions text{
@@ -34,3 +38,17 @@
     font-weight: 500;
     padding: 0 .5rem;
 }
+
+/* .recharts-tooltip-cursor{
+    visibility: hidden;
+} */
+
+/* .sessions_area{
+    width: 100%;
+    background-color: white;
+    opacity: 0.3;
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    top: 0;
+} */

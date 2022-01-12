@@ -1,18 +1,22 @@
 .dashboard{
     display: flex;
     flex-direction: column;
-    width: 80%;
-    margin: 2rem auto;
+    width: 85%;
+    margin: 3rem auto 8rem auto;
+    /* align-items: center; */
+    height: 100%;
 }
 
 .dashboard_main{
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .dashboard_charts{
     display: flex;
     flex-direction: column;
+    width: 75%;
     /* flex-basis: 80%; */
 }
 
@@ -21,6 +25,8 @@
     justify-content: space-between;
     flex-flow: row wrap;
     width: 100%;
+    margin-top: 2rem;
+    height: 50%;
 }
 
 .dashboard_cards{
