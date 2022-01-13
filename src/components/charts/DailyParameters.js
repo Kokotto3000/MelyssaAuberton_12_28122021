@@ -7,35 +7,35 @@ function DailyParameters(props) {
 
     const [ userActivity, setUserActivity ]= useState({});
 
-    const [ isDataLoading, setDataLoading]= useState(false);
+    // const [ isDataLoading, setDataLoading]= useState(false);
 
-    const [ isError, setIsError ]= useState(true);
+    // const [ isError, setIsError ]= useState(true);
 
     useEffect(()=> {
-        setDataLoading(true);
+        // setDataLoading(true);
         const ApiCall= new FetchData(props.id);
         ApiCall.fetchUserActivity()
         .then(data => {
             // console.log(data);
             if(!data){                
-                setIsError(true);
+                // setIsError(true);
                 const error= "data loading error";
                 throw error;
             }
-            setIsError(false);
+            // setIsError(false);
             setUserActivity(data);
             }
         )
         .catch(error=> {
             console.log(error);            
         })
-        .finally(()=>{
-            setDataLoading(false);
-        })
+        // .finally(()=>{
+        //     setDataLoading(false);
+        // })
     }, [props.id]);
 
     return(
-        console.log(userActivity),
+        // console.log(userActivity),
         <div className='daily-parameters'>
             <div className='daily-parameters_title'>
                 <h2>Activité quotidienne</h2>

@@ -20,7 +20,7 @@ export default class UserActivity{
     }
 
     setUpYTick(){
-        console.log(this.sessions);
+        // console.log(this.sessions);
         const kilograms= [];
 
         for(const session of this.sessions){
@@ -37,10 +37,10 @@ export default class UserActivity{
             this.ticks.push(i);
         }
 
-        console.log(this.ticks);
+        // console.log(this.ticks);
 
         this.tick= max-min;
         
-        console.log(this.tick)
+        // console.log(this.tick)
     }
 }

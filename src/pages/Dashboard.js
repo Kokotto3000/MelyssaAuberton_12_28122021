@@ -1,8 +1,8 @@
 import '../styles/Dashboard.css';
 import Banner from "../components/Banner";
 import DailyParameters from "../components/charts/DailyParameters";
-import SessionsDurations from "../components/charts/SessionsDurations";
-import ActivityDetails from "../components/charts/ActivityDetails";
+import AverageSessions from "../components/charts/AverageSessions";
+import Performance from "../components/charts/Performance";
 import Score from "../components/charts/Score";
 import InfosCard from "../components/InfosCard";
 import Loader from '../components/Loader';
@@ -61,8 +61,8 @@ function Dashboard() {
                     <div className='dashboard_charts'>
                         <DailyParameters id={ userIdInt } />
                         <div className='dashboard_charts-trio'>
-                            <SessionsDurations id={ userIdInt } />
-                            <ActivityDetails id={ userIdInt } />
+                            <AverageSessions id={ userIdInt } />
+                            <Performance id={ userIdInt } />
                             <Score score={ userDatas.score } />
                         </div>
                     </div>

@@ -2,10 +2,11 @@ import { PieChart, Pie, Cell } from 'recharts';
 import '../../styles/Score.css';
 
 function Score(props) {
+
     const data = [
-        { id: "1", name: "L1", value: 100 },
-        { id: "2", name: "L2", value: props.score * 100 }
-        ];
+        { id: "1", value: 100 },
+        { id: "2", value: props.score }
+    ];
       
     return(
         <div className='score'>
@@ -62,7 +63,7 @@ function Score(props) {
                             fill='#282D30'
                             fontWeight="bold"
                             fontSize="2.6rem">
-                            {props.score * 100} %
+                            { props.score } %
                     </tspan>
                     <tspan
                         x={125}
