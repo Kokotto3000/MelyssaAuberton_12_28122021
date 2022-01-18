@@ -7,6 +7,8 @@ function AverageSessions(props) {
 
     const [ userAverageSessions, setUserAverageSessions ]= useState({});
 
+    const [ daysArray, setDaysArray]= useState([]);
+
     // const [ isDataLoading, setDataLoading]= useState(false);
 
     // const [ isError, setIsError ]= useState(true);
@@ -24,6 +26,12 @@ function AverageSessions(props) {
             }
             // setIsError(false);
             setUserAverageSessions(data);
+            const days=[];
+            for(const session of data.sessions){
+                days.push(session.day);
+            }
+            setDaysArray(days);
+            
             }
         )
         .catch(error=> {
@@ -34,32 +42,37 @@ function AverageSessions(props) {
         // })
     }, [props.id]);
 
-    return(
+    return(  
+        console.log(daysArray),
+
         <div className='sessions'>
             <h2>Durée moyenne des sessions</h2>
             <ResponsiveContainer className='sessions_chart'>
                 <LineChart
-                  data={ userAverageSessions.sessions}
+                height={100}
+                  data={ userAverageSessions.sessions }
                   margin={{
-                    top: 5,
-                    right: -15,
-                    left: -15,
-                    bottom: 5,
+                    top: 0,
+                    right: -1,
+                    left: -1,
+                    bottom: 0,
                   }}
                 >
-                  <CartesianGrid strokeDasharray="1" horizontal="" vertical=""/>
-                  <XAxis margin={{
-                      top: 5,
-                      right: 10,
-                      left: 10,
-                      bottom: 5,
-                    }} 
-                    dataKey="day" tickLine={false} axisLine={false} interval={0} maxTickGap={5} stroke="rgba(255, 255, 255, 0.6)" tick={{ fontSize: 14, fill: "rgba(255, 255, 255, 0.5)"}} />
-                    <YAxis domain={["dataMin - 10", "dataMax + 30"]} hide={true} />
-                    <Tooltip content={<CustomTooltip />} cursor={ false } />
+                    {/* <CartesianGrid strokeDasharray="1" horizontal="" vertical=""/> */}
+                    <XAxis
+                    dataKey="day" tickLine={false} axisLine={false} interval={0} maxTickGap={5} hide={true}/>
+                    <YAxis domain={["dataMin - 30", "dataMax + 30"]} hide={true} />
+                    <Tooltip content={<CustomTooltip />} />
                     <Line type="natural" dataKey="sessionLength" stroke="rgba(255, 255, 255, 0.6)" strokeWidth={3} dot={false} activeDot={{ stroke: '#FFFFFF33', strokeWidth: 10, r: 5 }} />
                 </LineChart>
             </ResponsiveContainer>
+            <div className="sessions_xAxis">
+                {daysArray.map((day, index) => (
+                    <p key={index}>
+                        {day}
+                    </p>
+				))}
+            </div>
         </div>
     );
 }

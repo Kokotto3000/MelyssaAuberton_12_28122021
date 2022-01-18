@@ -7,7 +7,7 @@
     flex-basis: 30%;
     /* width: 18vw;
     height: 18vw; */
-    position: relative;
+    position: relative;    
 }
 
 .sessions_chart{
@@ -39,9 +39,14 @@
     padding: 0 .5rem;
 }
 
-/* .recharts-tooltip-cursor{
-    visibility: hidden;
-} */
+.recharts-tooltip-cursor{
+    /* visibility: hidden; */
+    transform: translateX(500px);
+    stroke: rgba(0, 0, 0, 0.1);
+    stroke-width: 1000px;
+    height: 100%;
+    /* width: 100%; */
+}
 
 /* .sessions_area{
     width: 100%;
@@ -52,3 +57,14 @@
     left: 0;
     top: 0;
 } */
+
+.sessions_xAxis{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.4rem;
+    padding: 2rem 0;
+}
