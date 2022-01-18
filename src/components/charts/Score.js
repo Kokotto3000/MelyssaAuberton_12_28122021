@@ -1,4 +1,4 @@
-import { PieChart, Pie, Cell } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import '../../styles/Score.css';
 
 function Score(props) {
@@ -10,28 +10,30 @@ function Score(props) {
       
     return(
         <div className='score'>
-            <h2>Score</h2>            
+            <h2>Score</h2>
+
+            <ResponsiveContainer className='score_chart'>         
 
             <PieChart 
-                className="score-chart" 
-                width={250}
-                height={200}
+                // className="score-chart" 
+                // width={250}
+                // height={200}
                 background={true}
                 data={data}
                 margin={{
-                    top: 10,
-                    right: 30,
-                    left: 0,
-                    bottom: 0,
+                    top: 30,
+                    right: 10,
+                    left: 10,
+                    bottom: 10,
                 }}>
                 
                 <Pie
                     data={data}
                     dataKey= "value"
-                    outerRadius="90%"
+                    outerRadius="75%"
                     fill="white"
                     startAngle={90}
-                    // endAngle={-270}
+                    endAngle={-360}
                     paddingAngle={0}
                 >
                     
@@ -39,8 +41,8 @@ function Score(props) {
                 <Pie
                     data={data}
                     dataKey="value"
-                    innerRadius="80%"
-                    outerRadius="100%"
+                    innerRadius="75%"
+                    outerRadius="90%"
                     fill="red"
                     startAngle={90}
                     endAngle={-360}
@@ -58,24 +60,24 @@ function Score(props) {
                     dominantBaseline="middle"
                 >
                     <tspan
-                        x={125}
-                        y={100}
+                        x={"50%"}
+                        y={"40%"}
                             fill='#282D30'
                             fontWeight="bold"
                             fontSize="2.6rem">
                             { props.score } %
                     </tspan>
                     <tspan
-                        x={125}
-                        y={126}
+                        x={"50%"}
+                        y={"50%"}
                         fill='#74798C'
                         fontWeight="normal"
                         fontSize="2rem">
                             de votre
                     </tspan>
                     <tspan
-                        x={125}
-                        y={152}
+                        x={"50%"}
+                        y={"60%"}
                         fill='#74798C'
                         fontWeight="normal"
                         fontSize="2rem">
@@ -83,6 +85,7 @@ function Score(props) {
                     </tspan>
                 </text>                
             </PieChart>
+            </ResponsiveContainer>
         </div>
         
     );

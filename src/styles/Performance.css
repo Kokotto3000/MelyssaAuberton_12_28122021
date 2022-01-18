@@ -6,6 +6,9 @@
     /* width: 18vw;
     height: 18vw; */
     /* min-width: 25.8rem; */
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
 }
 
 .performance_chart{

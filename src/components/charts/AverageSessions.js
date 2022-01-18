@@ -1,5 +1,5 @@
 import '../../styles/AverageSessions.css';
-import { LineChart, Line, Tooltip, ResponsiveContainer, XAxis, YAxis, ReferenceArea, CartesianGrid } from 'recharts';
+import { LineChart, Line, Tooltip, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 import { useEffect, useState } from 'react';
 import FetchData from '../../services/FetchData';
 
@@ -49,7 +49,7 @@ function AverageSessions(props) {
             <h2>Durée moyenne des sessions</h2>
             <ResponsiveContainer className='sessions_chart'>
                 <LineChart
-                height={100}
+                // height={ 100 }
                   data={ userAverageSessions.sessions }
                   margin={{
                     top: 0,
