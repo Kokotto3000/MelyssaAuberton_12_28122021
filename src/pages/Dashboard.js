@@ -55,9 +55,10 @@ function Dashboard() {
     return (
         
         <section className='dashboard'>
-            <div>
                 <Banner firstName={userDatas.firstName} />
+                
                 <div className="dashboard_main">
+
                     <div className='dashboard_charts'>
                         <DailyParameters id={ userIdInt } />
                         <div className='dashboard_charts-trio'>
@@ -66,6 +67,7 @@ function Dashboard() {
                             <Score score={ userDatas.score } />
                         </div>
                     </div>
+
                     <div className='dashboard_cards'>
                         <InfosCard icon={ calories } type="Calories" amount={`${userDatas.calorieCount}kCal`} />                              
                         <InfosCard icon={ protein } type="Proteines" amount={`${userDatas.proteinCount}g`} />
@@ -74,7 +76,7 @@ function Dashboard() {
                     </div>
                     
                 </div>
-            </div>
+            
         </section>        
     )
 }

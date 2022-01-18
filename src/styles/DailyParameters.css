@@ -1,27 +1,27 @@
 .daily-parameters{
     display: flex;
     flex-direction: column;
-    font-size: 1.5rem;
-    color: #20253A;
     background-color: #FBFBFB;
     border-radius: .5rem;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
-    padding: 2rem;
-    /* flex-basis: 25%;
-    min-width: 25.8rem; */
-    height: 50%;
+    color: #20253A;
+    font-size: 1.5rem;    
+    margin-bottom: 3rem;
+    padding: 3rem;
+    height: 35%;
+    min-height: 32rem;    
 }
 
 .daily-parameters_chart{
+    margin: 3rem auto;
+    height: 66%;
     width: 100%;
-    height: 100%;
-    min-height: 32rem;
 }
 
 .daily-parameters_title{
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between;    
+    align-items: center;
 }
 
 .daily-parameters_title ul{

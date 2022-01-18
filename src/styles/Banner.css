@@ -4,6 +4,7 @@
 
 .banner h1{
     font-size: 4.8rem;
+    padding: 2rem 0;
 }
 
 .banner h1 span{
@@ -13,4 +14,5 @@
 .banner p{
     font-size: 1.8rem;
     font-weight: 400;
+    padding: 2rem 0;
 }

@@ -1,32 +1,30 @@
 .dashboard{
     display: flex;
     flex-direction: column;
-    width: 85%;
     margin: 3rem auto 8rem auto;
-    /* align-items: center; */
     height: 100%;
+    width: 85%;
 }
 
 .dashboard_main{
     display: flex;
     justify-content: space-between;
+    margin: 3rem 0;
     width: 100%;
 }
 
 .dashboard_charts{
     display: flex;
     flex-direction: column;
-    width: 75%;
-    /* flex-basis: 80%; */
+    width: 75%;    
 }
 
 .dashboard_charts-trio{
     display: flex;
-    justify-content: space-between;
     flex-flow: row wrap;
-    width: 100%;
-    margin-top: 2rem;
+    justify-content: space-between;
     height: 50%;
+    width: 100%;
 }
 
 .dashboard_cards{
