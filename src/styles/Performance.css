@@ -4,9 +4,9 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
     flex-basis: 30%;
     height: 100%;
-    width: 100%;
-    max-width: 30rem;
-    max-height: 30rem;    
+    min-height: 26rem;
+    max-height: 30rem;
+    max-width: 30rem;        
 }
 
 .performance_chart{

@@ -9,7 +9,8 @@
     margin-bottom: 3rem;
     padding: 3rem;
     height: 35%;
-    min-height: 32rem;    
+    min-height: 32rem; 
+    width: 100%;   
 }
 
 .daily-parameters_chart{

@@ -34,11 +34,6 @@ function Performance(props) {
         <div className='performance'>
             <ResponsiveContainer className='performance_chart'>
                 <RadarChart
-                    // width={250} 
-                    // height={200} 
-                    // margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
-                    // cx="50%" 
-                    // cy="100%" 
                     outerRadius="60%" 
                     data={ userPerformance.data }>
                 <PolarGrid />

@@ -4,6 +4,7 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
     border-radius: 5px;
     height: 100%;
+    min-height: 26rem;
     max-height: 30rem;   
     flex-basis: 30%;
     max-width: 30rem;

@@ -61,7 +61,7 @@ function Score(props) {
                 >
                     <tspan
                         x={"50%"}
-                        y={"40%"}
+                        y={"50%"}
                             fill='#282D30'
                             fontWeight="bold"
                             fontSize="2.6rem">
@@ -69,7 +69,7 @@ function Score(props) {
                     </tspan>
                     <tspan
                         x={"50%"}
-                        y={"50%"}
+                        y={"60%"}
                         fill='#74798C'
                         fontWeight="normal"
                         fontSize="2rem">
@@ -77,7 +77,7 @@ function Score(props) {
                     </tspan>
                     <tspan
                         x={"50%"}
-                        y={"60%"}
+                        y={"70%"}
                         fill='#74798C'
                         fontWeight="normal"
                         fontSize="2rem">

@@ -5,6 +5,7 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
     color: #20253A;  
     height: 100%;
+    min-height: 26rem;
     max-height: 30rem;
     flex-basis: 30%;
     max-width: 30rem;
@@ -12,11 +13,12 @@
 
 .score h2{
     position: absolute;
-    top: 10%;
-    left: 10%;
+    top: 0;
+    left: 0;
     color: #20253A;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
+    padding: 2rem 3rem;
 }
 
 .score_chart{
