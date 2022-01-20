@@ -1,4 +1,5 @@
 import '../styles/Banner.css';
+import PropTypes from 'prop-types';
 
 function Banner(props) {
     return(
@@ -8,5 +9,9 @@ function Banner(props) {
         </div>        
     );
 }
+
+Banner.propTypes = {
+    firstName: PropTypes.string.isRequired
+};
 
 export default Banner;

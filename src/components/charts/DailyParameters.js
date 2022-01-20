@@ -2,6 +2,13 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import '../../styles/DailyParameters.css';
 import FetchData from '../../services/FetchData';
 import React, { useEffect, useState } from 'react';
+import { PropTypes } from 'prop-types';
+
+/**
+ * 
+ * @param {number} id 
+ * @returns user daily parameters bar chart
+ */
 
 function DailyParameters(props) {
 
@@ -62,5 +69,9 @@ function CustomTooltip({active, payload}){
 
     return null;
 }
+
+DailyParameters.propTypes = {
+    id: PropTypes.number.isRequired
+};
 
 export default DailyParameters;

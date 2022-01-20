@@ -2,6 +2,13 @@ import '../../styles/AverageSessions.css';
 import { LineChart, Line, Tooltip, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 import { useEffect, useState } from 'react';
 import FetchData from '../../services/FetchData';
+import { PropTypes } from 'prop-types';
+
+/**
+ * 
+ * @param {number} id - user Id
+ * @returns user average sessions line chart
+ */
 
 function AverageSessions(props) {
 
@@ -90,5 +97,9 @@ function CustomTooltip({active, payload}){
 
     return null;
 }
+
+AverageSessions.propTypes = {
+    id: PropTypes.number.isRequired
+};
 
 export default AverageSessions;

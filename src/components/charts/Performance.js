@@ -2,6 +2,13 @@ import '../../styles/Performance.css';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 import { useEffect, useState } from 'react';
 import FetchData from '../../services/FetchData';
+import { PropTypes } from 'prop-types';
+
+/**
+ * 
+ * @param {number} id 
+ * @returns user performance radar chart
+ */
 
 function Performance(props) {
 
@@ -46,5 +53,9 @@ function Performance(props) {
         
     );
 }
+
+Performance.propTypes = {
+    id: PropTypes.number.isRequired
+};
 
 export default Performance;

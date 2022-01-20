@@ -1,4 +1,13 @@
 import '../styles/InfosCard.css';
+import { PropTypes } from 'prop-types';
+
+/**
+ * 
+ * @param {number|string} amount
+ * @param {string} icon
+ * @param {string} type
+ * @returns user infos cards
+ */
 
 function InfosCard(props) {
     console.log(props)
@@ -9,5 +18,14 @@ function InfosCard(props) {
         </div>
     );
 }
+
+InfosCard.propTypes = {
+    icon: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    amount: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]).isRequired
+};
 
 export default InfosCard;
