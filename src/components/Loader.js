@@ -7,7 +7,7 @@ import '../styles/Loader.css';
 
 function Loader(){
     return(
-        <div class="loader">
+        <div className="loader">
 			<span>L</span>
 			<span>o</span>
 			<span>a</span>

@@ -3,7 +3,7 @@ import UserActivity from "./models/UserActivity";
 import UserPerformance from "./models/UserPerformance";
 import UserAverageSessions from "./models/UserAverageSessions";
 
-// pour éviter répétitions, trouver un moyen de récupérer url ? ou changer les endroits ou il y a des variations avec interpolation...
+const url= "http://localhost:3000/user/";
 
 export default class FetchData{
 
@@ -11,8 +11,15 @@ export default class FetchData{
         this.id= id;
     }
 
+    /**
+     * 
+     * @param {string} url
+     * @param {number} this.id 
+     * @returns {object} data from API - Used in Banner, InfosCard, and Score
+     */
+
     fetchUserDatas(){
-        return fetch(`http://localhost:3000/user/${this.id}`)
+        return fetch(`${url + this.id}`)
         .then(response=> response.json())
         .then(result=> {
             if(result !== "can not get user") return new UserDatas(result.data);
@@ -20,9 +27,16 @@ export default class FetchData{
         })
         .catch(error=> console.log(error));
     }
+
+    /**
+     * 
+     * @param {string} url
+     * @param {number} this.id 
+     * @returns {object} data from API - Used in DailyParameters
+     */
     
     fetchUserActivity(){
-        return fetch(`http://localhost:3000/user/${this.id}/activity`)
+        return fetch(`${url + this.id}/activity`)
         .then(response=> response.json())
         .then(result=> {
             if(result !== "can not get user") return new UserActivity(result.data);
@@ -31,8 +45,15 @@ export default class FetchData{
         .catch(error=> console.log(error));
     }
 
+    /**
+     * 
+     * @param {string} url
+     * @param {number} this.id 
+     * @returns {object} data from API - Used in Performance
+     */
+
     fetchUserPerformance(){
-        return fetch(`http://localhost:3000/user/${this.id}/performance`)
+        return fetch(`${url + this.id}/performance`)
         .then(response=> response.json())
         .then(result=> {
             if(result !== "can not get user") return new UserPerformance(result.data);
@@ -41,15 +62,20 @@ export default class FetchData{
         .catch(error=> console.log(error));
     }
 
+    /**
+     * 
+     * @param {string} url
+     * @param {number} this.id 
+     * @returns {object} data from API - Used in AverageSessions
+     */
+
     fetchUserAverageSessions(){
-        return fetch(`http://localhost:3000/user/${this.id}/average-sessions`)
+        return fetch(`${url + this.id}/average-sessions`)
         .then(response=> response.json())
         .then(result=> {
-            console.log(result);
             if(result !== "can not get user") return new UserAverageSessions(result.data);
             throw result;
         })
         .catch(error=> console.log(error));
     }
-
 }
