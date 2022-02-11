@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# SPORTSEE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project 12 of OpenClassrooms "Front-End Developper".
 
-## Available Scripts
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
 
-In the project directory, you can run:
 
-### `npm start`
+## Develop an analytics dashboard with React
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Create the consumer dashboard of a sports analytics platform : SportSee, using [React](https://fr.reactjs.org/) and an external API to fetch data.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+In this project, I used the chart library [Recharts](https://recharts.org/en-US/) to generate the charts.
 
-### `npm test`
+## Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- You need [Git](https://git-scm.com/) to clone the repository.
+- Tou need [Node](https://nodejs.org/en/) to run the npm commands.
 
-### `npm run build`
+## Dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [React](https://www.npmjs.com/package/react) v17.0.2
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom) v6.2.1
+- [recharts](https://www.npmjs.com/package/recharts) v2.1.8
+- [prop-types](https://www.npmjs.com/package/prop-types) v15.8.0
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Recommended text editor : [Visual Studio Code](https://code.visualstudio.com).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Install and run the project
 
-### `npm run eject`
+- First, follow the instructions to install and run the backend API :
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+[BackEnd API](https://github.com/Kokotto3000/P9-front-end-dashboard)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Then clone the project to your computer :
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+`git@github.com:Kokotto3000/MelyssaAuberton_12_28122021.git`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Go to the project folder :
 
-## Learn More
+`cd MelyssaAuberton_12_28122021`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Install the packages
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`npm install`
 
-### Code Splitting
+- Finally, run the application (port 3001 by default):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`npm start`
 
-### Analyzing the Bundle Size
+## Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- (instructions to choose between API and Mocked Data)
 
-### Making a Progressive Web App
+- To switch between the two available user profiles (12 or 18), the two URL are :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+`http://localhost:3001/12`
+`http://localhost:3001/18`
 
-### Advanced Configuration
+### Documents
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+You can find the application mock-up on [Figma](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1),
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+and the Kanban board with User Stories of the project on [Notion](https://www.notion.so/Tableau-de-bord-SportSee-6686aa4b5f44417881a4884c9af5669e).
