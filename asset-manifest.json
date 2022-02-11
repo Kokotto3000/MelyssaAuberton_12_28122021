@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "./static/css/main.7d015420.css",
-    "main.js": "./static/js/main.b1a47178.js",
-    "static/media/logo.svg": "./static/media/logo.837414860efdf652f26ae7be654e06c5.svg",
-    "static/media/swim.svg": "./static/media/swim.e26dba434236828a108a786d8215cd31.svg",
-    "static/media/cycle.svg": "./static/media/cycle.d516c0e89dbb3aaab23afac6a130ca06.svg",
-    "static/media/carbs-icon.svg": "./static/media/carbs-icon.aa0e74661df8c71ea59cbe777ac24615.svg",
-    "static/media/fat-icon.svg": "./static/media/fat-icon.82c6cb9fd2b3e6307fca82c2f796ed14.svg",
-    "static/media/protein-icon.svg": "./static/media/protein-icon.c285979616f56dc9dfa457e51c583d68.svg",
-    "static/media/yoga.svg": "./static/media/yoga.6c31a2775a609d06fd5d99eb347250ed.svg",
-    "static/media/calories-icon.svg": "./static/media/calories-icon.5db5a3aff9bd8f441f49792782c8262e.svg",
-    "index.html": "./index.html",
-    "static/media/bodybuilding.svg": "./static/media/bodybuilding.4fe7fb9fe3554121b3d42dcb489eefd0.svg",
-    "main.7d015420.css.map": "./static/css/main.7d015420.css.map",
-    "main.b1a47178.js.map": "./static/js/main.b1a47178.js.map"
+    "main.css": "/static/css/main.126a3334.css",
+    "main.js": "/static/js/main.3b36fed3.js",
+    "static/media/logo.svg": "/static/media/logo.837414860efdf652f26ae7be654e06c5.svg",
+    "static/media/swim.svg": "/static/media/swim.e26dba434236828a108a786d8215cd31.svg",
+    "static/media/cycle.svg": "/static/media/cycle.d516c0e89dbb3aaab23afac6a130ca06.svg",
+    "static/media/carbs-icon.svg": "/static/media/carbs-icon.aa0e74661df8c71ea59cbe777ac24615.svg",
+    "index.html": "/index.html",
+    "static/media/fat-icon.svg": "/static/media/fat-icon.82c6cb9fd2b3e6307fca82c2f796ed14.svg",
+    "static/media/protein-icon.svg": "/static/media/protein-icon.c285979616f56dc9dfa457e51c583d68.svg",
+    "static/media/yoga.svg": "/static/media/yoga.6c31a2775a609d06fd5d99eb347250ed.svg",
+    "static/media/calories-icon.svg": "/static/media/calories-icon.5db5a3aff9bd8f441f49792782c8262e.svg",
+    "static/media/bodybuilding.svg": "/static/media/bodybuilding.4fe7fb9fe3554121b3d42dcb489eefd0.svg",
+    "main.126a3334.css.map": "/static/css/main.126a3334.css.map",
+    "main.3b36fed3.js.map": "/static/js/main.3b36fed3.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d015420.css",
-    "static/js/main.b1a47178.js"
+    "static/css/main.126a3334.css",
+    "static/js/main.3b36fed3.js"
   ]
 }
