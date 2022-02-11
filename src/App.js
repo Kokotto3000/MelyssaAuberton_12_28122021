@@ -10,8 +10,8 @@ import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 
 /**
- * 
- * @returns Sportsee App
+ *
+ * @returns Sportsee App with two different routes for main : Dashboard or NotFound
  */
 
 function App() {   

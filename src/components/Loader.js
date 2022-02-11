@@ -7,9 +7,15 @@ import '../styles/Loader.css';
 
 function Loader(){
     return(
-        <div className="loader">
-            <h2>Loader</h2>
-        </div>        
+        <div class="loader">
+			<span>L</span>
+			<span>o</span>
+			<span>a</span>
+			<span>d</span>
+			<span>i</span>
+			<span>n</span>
+			<span>G</span>
+		</div>
     )
 }
 

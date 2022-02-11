@@ -27,12 +27,11 @@ function Dashboard() {
 
     const [ userDatas, setUserDatas ]= useState({});
 
-    const [ isDataLoading, setDataLoading]= useState(false);
+    const [ isDataLoading, setDataLoading]= useState(true);
 
     const [ isError, setIsError ]= useState(true);
 
     useEffect(()=> {
-        setDataLoading(true);
         const ApiCall= new FetchData(userIdInt);
         ApiCall.fetchUserDatas()
         .then(data => {
@@ -58,7 +57,6 @@ function Dashboard() {
     if(isError) return <NotFound />;
 
     return (
-        
         <section className='dashboard'>
                 <Banner firstName={ userDatas.firstName } />
                 
