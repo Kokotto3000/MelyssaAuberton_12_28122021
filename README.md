@@ -53,11 +53,10 @@ Recommended text editor : [Visual Studio Code](https://code.visualstudio.com).
 
 - To switch between the two available user profiles (12 or 18), the two URL are :
 
-`http://localhost:3001/12`
-`http://localhost:3001/18`
+- `http://localhost:3001/12`
+- `http://localhost:3001/18`
 
 ### Documents
 
 You can find the application mock-up on [Figma](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=0%3A1),
-
 and the Kanban board with User Stories of the project on [Notion](https://www.notion.so/Tableau-de-bord-SportSee-6686aa4b5f44417881a4884c9af5669e).
