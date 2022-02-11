@@ -9,6 +9,11 @@ import Aside from "./components/Aside";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
 
+/**
+ * 
+ * @returns Sportsee App
+ */
+
 function App() {   
     return (
         <BrowserRouter>

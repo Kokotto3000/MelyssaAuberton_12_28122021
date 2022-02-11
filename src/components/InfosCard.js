@@ -9,12 +9,11 @@ import { PropTypes } from 'prop-types';
  * @returns user infos cards
  */
 
-function InfosCard(props) {
-    console.log(props)
+function InfosCard({ icon, type, amount }) {
     return(
         <div className="infos">
-            <img className="aside_logo" src={ props.icon } alt={`logo ${props.type}`} />
-            <p><span>{ props.amount }</span><br />{ props.type }</p>
+            <img className="aside_logo" src={ icon } alt={`logo ${ type }`} />
+            <p><span>{ amount }</span><br />{ type }</p>
         </div>
     );
 }

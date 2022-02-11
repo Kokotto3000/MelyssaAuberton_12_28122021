@@ -13,8 +13,8 @@ In this project, I used the chart library [Recharts](https://recharts.org/en-US/
 
 ## Prerequisites
 
-- You need [Git](https://git-scm.com/) to clone the repository.
-- Tou need [Node](https://nodejs.org/en/) to run the npm commands.
+- You will need [Git](https://git-scm.com/) to clone the repository.
+- and [Node](https://nodejs.org/en/) to run the npm commands.
 
 ## Dependencies
 

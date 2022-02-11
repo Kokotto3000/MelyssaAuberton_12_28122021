@@ -10,12 +10,12 @@ import { PropTypes } from 'prop-types';
  * @returns user daily parameters bar chart
  */
 
-function DailyParameters(props) {
+function DailyParameters({ id }) {
 
     const [ userActivity, setUserActivity ]= useState({});
 
     useEffect(()=> {
-        const ApiCall= new FetchData(props.id);
+        const ApiCall= new FetchData(id);
         ApiCall.fetchUserActivity()
         .then(data => {
             if(!data){                
@@ -28,7 +28,7 @@ function DailyParameters(props) {
         .catch(error=> {
             console.log(error);            
         })
-    }, [props.id]);
+    }, [id]);
 
     return(
         <div className='daily-parameters'>
@@ -53,20 +53,18 @@ function DailyParameters(props) {
                 </BarChart>
             </ResponsiveContainer>            
         </div>
-        
     );
 }
 
-function CustomTooltip({active, payload}){
+function CustomTooltip({ active, payload }){
     if(active){
         return (
             <div className="daily-parameters_tooltip">
-                <p>{payload[0].payload.kilogram}kg</p>
-                <p>{payload[0].payload.calories}Kcal</p>
+                <p>{ payload[0].payload.kilogram }kg</p>
+                <p>{ payload[0].payload.calories }Kcal</p>
             </div>
         )
     }
-
     return null;
 }
 

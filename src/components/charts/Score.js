@@ -8,11 +8,11 @@ import { PropTypes } from 'prop-types';
  * @returns user score pie chart
  */
 
-function Score(props) {
+function Score({ score }) {
 
     const data = [
         { id: "1", value: 100 },
-        { id: "2", value: props.score }
+        { id: "2", value: score }
     ];
       
     return(
@@ -25,58 +25,54 @@ function Score(props) {
                     // className="score-chart" 
                     // width={250}
                     // height={200}
-                    background={true}
-                    data={data}
-                    margin={{
-                        top: 30,
-                        right: 10,
-                        left: 10,
-                        bottom: 10,
-                    }}>
+                    background={ true }
+                    data={ data }
+                    margin={{ top: 30, right: 10, left: 10, bottom: 10 }}
+                >
                     
                     <Pie
-                        data={data}
+                        data={ data }
                         dataKey= "value"
                         outerRadius="75%"
                         fill="white"
-                        startAngle={90}
-                        endAngle={-360}
-                        paddingAngle={0}
+                        startAngle={ 90 }
+                        endAngle={ -360 }
+                        paddingAngle={ 0 }
                     >
-                        
                     </Pie>
+
                     <Pie
                         data={data}
                         dataKey="value"
                         innerRadius="75%"
                         outerRadius="90%"
                         fill="red"
-                        startAngle={90}
-                        endAngle={-360}
-                        paddingAngle={0}
-                        cornerRadius={50}
+                        startAngle={ 90 }
+                        endAngle={ -360 }
+                        paddingAngle={ 0 }
+                        cornerRadius={ 50 }
                     >
-                    <Cell
-                        key="test"
-                        fill="transparent"
-                        stroke="transparent"
-                    />
+                        <Cell
+                            key="test"
+                            fill="transparent"
+                            stroke="transparent"
+                        />
                     </Pie>
                     <text
                         textAnchor="middle"
                         dominantBaseline="middle"
                     >
                         <tspan
-                            x={"50%"}
-                            y={"50%"}
-                                fill='#282D30'
-                                fontWeight="bold"
-                                fontSize="2.6rem">
-                                { props.score } %
+                            x={ "50%" }
+                            y={ "50%" }
+                            fill='#282D30'
+                            fontWeight="bold"
+                            fontSize="2.6rem">
+                                { score } %
                         </tspan>
                         <tspan
-                            x={"50%"}
-                            y={"60%"}
+                            x={ "50%" }
+                            y={ "60%" }
                             fill='#74798C'
                             fontWeight="normal"
                             fontSize="2rem">
@@ -94,7 +90,6 @@ function Score(props) {
                 </PieChart>
             </ResponsiveContainer>
         </div>
-        
     );
 }
 

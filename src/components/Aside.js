@@ -5,6 +5,12 @@ import bodybuilding from '../assets/bodybuilding.svg';
 import '../styles/Aside.css';
 import { Link } from 'react-router-dom';
 
+/**
+ * 
+ * Aside vertical navigation bar isn't already functional
+ * @returns aside vertical navigation bar
+ */
+
 function Aside() {
     return (
         <aside className="aside">

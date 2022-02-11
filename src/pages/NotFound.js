@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom';
 import '../styles/NotFound.css';
 
+/**
+ * 
+ * @returns main with an 404 error message when page is not found
+ */
+
 function NotFound() {
     return (
         <section className="not-found">

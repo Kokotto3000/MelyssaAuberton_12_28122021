@@ -1,5 +1,10 @@
 import '../styles/Loader.css';
 
+/**
+ * 
+ * @returns loader during data loading
+ */
+
 function Loader(){
     return(
         <div className="loader">

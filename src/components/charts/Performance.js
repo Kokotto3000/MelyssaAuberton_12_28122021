@@ -10,13 +10,13 @@ import { PropTypes } from 'prop-types';
  * @returns user performance radar chart
  */
 
-function Performance(props) {
+function Performance({ id }) {
 
     const [ userPerformance, setUserPerformance ]= useState({});
 
     useEffect(()=> {
       // setDataLoading(true);
-        const ApiCall= new FetchData(props.id);
+        const ApiCall= new FetchData(id);
         ApiCall.fetchUserPerformance()
         .then(data => {
             
@@ -35,7 +35,7 @@ function Performance(props) {
         // .finally(()=>{
         //     setDataLoading(false);
         // })
-    }, [props.id]);
+    }, [id]);
 
     return (
         <div className='performance'>

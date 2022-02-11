@@ -10,7 +10,7 @@ import { PropTypes } from 'prop-types';
  * @returns user average sessions line chart
  */
 
-function AverageSessions(props) {
+function AverageSessions({ id }) {
 
     const [ userAverageSessions, setUserAverageSessions ]= useState({});
 
@@ -22,10 +22,9 @@ function AverageSessions(props) {
 
     useEffect(()=> {
         // setDataLoading(true);
-        const ApiCall= new FetchData(props.id);
+        const ApiCall= new FetchData(id);
         ApiCall.fetchUserAverageSessions()
         .then(data => {
-            console.log(data);
             if(!data){                
                 // setIsError(true);
                 const error= "data loading error";
@@ -38,32 +37,23 @@ function AverageSessions(props) {
                 days.push(session.day);
             }
             setDaysArray(days);
-            
-            }
-        )
+        })
         .catch(error=> {
             console.log(error);            
         })
         // .finally(()=>{
         //     setDataLoading(false);
         // })
-    }, [props.id]);
+    }, [id]);
 
-    return(  
-        console.log(daysArray),
-
+    return(
         <div className='sessions'>
             <h2>Durée moyenne des sessions</h2>
             <ResponsiveContainer className='sessions_chart'>
                 <LineChart
                 // height={ 100 }
                   data={ userAverageSessions.sessions }
-                  margin={{
-                    top: 0,
-                    right: -1,
-                    left: -1,
-                    bottom: 0,
-                  }}
+                  margin={{ top: 0, right: -1, left: -1, bottom: 0 }}
                 >
                     {/* <CartesianGrid strokeDasharray="1" horizontal="" vertical=""/> */}
                     <XAxis
@@ -74,23 +64,23 @@ function AverageSessions(props) {
                 </LineChart>
             </ResponsiveContainer>
             <div className="sessions_xAxis">
-                {daysArray.map((day, index) => (
-                    <p key={index}>
-                        {day}
+                { daysArray.map((day, index) => (
+                    <p key={ index }>
+                        { day }
                     </p>
-				))}
+				)) }
             </div>
         </div>
     );
 }
 
-function CustomTooltip({active, payload}){
+function CustomTooltip({ active, payload }){
   
     if(active){
       // console.log(payload[0].payload.sessionLength)
         return(
             <div className="sessions_tooltip">
-                <p>{payload[0].payload.sessionLength} min</p>
+                <p>{ payload[0].payload.sessionLength } min</p>
             </div>
         )
     }

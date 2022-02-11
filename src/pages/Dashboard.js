@@ -16,6 +16,11 @@ import { useParams } from "react-router-dom";
 import FetchData from '../services/FetchData';
 import NotFound from './NotFound';
 
+/**
+ * 
+ * @returns user personnal dashboard with greetings banner, charts and infocards
+ */
+
 function Dashboard() {
     const userId= useParams();
     const userIdInt = parseInt(userId.id);
@@ -55,7 +60,7 @@ function Dashboard() {
     return (
         
         <section className='dashboard'>
-                <Banner firstName={userDatas.firstName} />
+                <Banner firstName={ userDatas.firstName } />
                 
                 <div className="dashboard_main">
 
