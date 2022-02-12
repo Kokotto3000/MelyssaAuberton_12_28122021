@@ -1,7 +1,7 @@
-import UserDatas from "./models/UserDatas";
-import UserActivity from "./models/UserActivity";
-import UserPerformance from "./models/UserPerformance";
-import UserAverageSessions from "./models/UserAverageSessions";
+import UserDatas from "../../models/UserDatas";
+import UserActivity from "../../models/UserActivity";
+import UserPerformance from "../../models/UserPerformance";
+import UserAverageSessions from "../../models/UserAverageSessions";
 
 const url= "http://localhost:3000/user/";
 

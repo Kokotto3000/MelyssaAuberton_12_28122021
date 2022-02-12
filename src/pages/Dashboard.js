@@ -13,8 +13,8 @@ import fat from "../assets/fat-icon.svg";
 
 import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
-import FetchData from '../services/FetchData';
 import NotFound from './NotFound';
+import switchService from '../services/SwitchService';
 
 /**
  * 
@@ -32,7 +32,7 @@ function Dashboard() {
     const [ isError, setIsError ]= useState(true);
 
     useEffect(()=> {
-        const ApiCall= new FetchData(userIdInt);
+        const ApiCall= switchService(userIdInt);
         ApiCall.fetchUserDatas()
         .then(data => {
             if(!data){                

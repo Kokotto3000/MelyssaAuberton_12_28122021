@@ -1,8 +1,8 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import '../../styles/DailyParameters.css';
-import FetchData from '../../services/FetchData';
 import React, { useEffect, useState } from 'react';
 import { PropTypes } from 'prop-types';
+import switchService from '../../services/SwitchService';
 
 /**
  * 
@@ -15,7 +15,7 @@ function DailyParameters({ id }) {
     const [ userActivity, setUserActivity ]= useState({});
 
     useEffect(()=> {
-        const ApiCall= new FetchData(id);
+        const ApiCall= switchService(id);
         ApiCall.fetchUserActivity()
         .then(data => {
             if(!data){                

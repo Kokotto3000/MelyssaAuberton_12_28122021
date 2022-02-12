@@ -1,8 +1,8 @@
 import '../../styles/Performance.css';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
 import { useEffect, useState } from 'react';
-import FetchData from '../../services/FetchData';
 import { PropTypes } from 'prop-types';
+import switchService from '../../services/SwitchService';
 
 /**
  * 
@@ -16,7 +16,7 @@ function Performance({ id }) {
 
     useEffect(()=> {
       // setDataLoading(true);
-        const ApiCall= new FetchData(id);
+        const ApiCall= switchService(id);
         ApiCall.fetchUserPerformance()
         .then(data => {
             

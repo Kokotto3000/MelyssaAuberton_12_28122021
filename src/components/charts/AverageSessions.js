@@ -1,8 +1,8 @@
 import '../../styles/AverageSessions.css';
 import { LineChart, Line, Tooltip, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 import { useEffect, useState } from 'react';
-import FetchData from '../../services/FetchData';
 import { PropTypes } from 'prop-types';
+import switchService from '../../services/SwitchService';
 
 /**
  * 
@@ -22,7 +22,7 @@ function AverageSessions({ id }) {
 
     useEffect(()=> {
         // setDataLoading(true);
-        const ApiCall= new FetchData(id);
+        const ApiCall= switchService(id);
         ApiCall.fetchUserAverageSessions()
         .then(data => {
             if(!data){                
