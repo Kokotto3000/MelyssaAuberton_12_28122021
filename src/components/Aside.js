@@ -16,16 +16,16 @@ function Aside() {
         <aside className="aside">
             <nav className="aside_nav">
                 <Link className="aside_nav-link" to="/id/yoga">
-                    <img className="aside_logo" src={ yoga } alt="logo Yoga" />
+                    <img className="logo" src={ yoga } alt="logo Yoga" />
                 </Link>
                 <Link className="aside_nav-link" to="/id/swim">
-                    <img className="aside_logo" src={ swim } alt="logo Swim" />
+                    <img className="logo" src={ swim } alt="logo Swim" />
                 </Link>
                 <Link className="aside_nav-link" to="/id/cycle">
-                    <img className="aside_logo" src={ cycle } alt="logo Cycle" />
+                    <img className="logo" src={ cycle } alt="logo Cycle" />
                 </Link>
                 <Link className="aside_nav-link" to="/id/bodybuilding">
-                    <img className="aside_logo" src={ bodybuilding } alt="logo Bodybuilding" />
+                    <img className="logo" src={ bodybuilding } alt="logo Bodybuilding" />
                 </Link>
             </nav>
 

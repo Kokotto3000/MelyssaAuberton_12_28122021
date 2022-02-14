@@ -1,9 +1,11 @@
-body{
-    height: 100vh;
-}
-
 main{
     display: flex;
     align-items: stretch;
     width: 100%;
+    /*height: 85vh;*/
+}
+
+.logo{
+    margin: 1rem;
+    width: 6.4rem;
 }

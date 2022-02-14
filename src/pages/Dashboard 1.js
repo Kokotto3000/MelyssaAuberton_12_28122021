@@ -5,7 +5,7 @@ import AverageSessions from "../components/charts/AverageSessions";
 import Performance from "../components/charts/Performance";
 import Score from "../components/charts/Score";
 import InfosCard from "../components/InfosCard";
-import Loader from './Loader';
+import Loader from '../components/Loader';
 import calories from "../assets/calories-icon.svg";
 import protein from "../assets/protein-icon.svg";
 import carbs from "../assets/carbs-icon.svg";
@@ -58,22 +58,27 @@ function Dashboard() {
 
     return (
         <section className='dashboard'>
-            <Banner firstName={ userDatas.firstName } />
-            
-            <div className="dashboard_main">
+                <Banner firstName={ userDatas.firstName } />
+                
+                <div className="dashboard_main">
 
-                <DailyParameters id={ userIdInt } />
+                    <div className='dashboard_charts'>
+                        <DailyParameters id={ userIdInt } />
+                        <div className='dashboard_charts-trio'>
+                            <AverageSessions id={ userIdInt } />
+                            <Performance id={ userIdInt } />
+                            <Score score={ userDatas.score } />
+                        </div>
+                    </div>
+
+                    <div className='dashboard_cards'>
+                        <InfosCard icon={ calories } type="Calories" amount={`${userDatas.calorieCount}kCal`} />                              
+                        <InfosCard icon={ protein } type="Proteines" amount={`${userDatas.proteinCount}g`} />
+                        <InfosCard icon={ carbs } type="Glucides" amount={`${userDatas.carbohydrateCount}g`} />
+                        <InfosCard icon={ fat } type="Lipides" amount={`${userDatas.lipidCount}g`} />
+                    </div>
                     
-                <AverageSessions id={ userIdInt } />
-                <Performance id={ userIdInt } />
-                <Score score={ userDatas.score } />
-                
-                <InfosCard icon={ calories } type="calories" amount={`${userDatas.calorieCount}kCal`} />                              
-                <InfosCard icon={ protein } type="proteines" amount={`${userDatas.proteinCount}g`} />
-                <InfosCard icon={ carbs } type="glucides" amount={`${userDatas.carbohydrateCount}g`} />
-                <InfosCard icon={ fat } type="lipides" amount={`${userDatas.lipidCount}g`} />
-                
-            </div>
+                </div>
             
         </section>        
     )

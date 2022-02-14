@@ -11,8 +11,8 @@ import { PropTypes } from 'prop-types';
 
 function InfosCard({ icon, type, amount }) {
     return(
-        <div className="infos">
-            <img className="aside_logo" src={ icon } alt={`logo ${ type }`} />
+        <div className={ `infos ${type}` }>
+            <img className="logo" src={ icon } alt={`logo ${ type }`} />
             <p><span>{ amount }</span><br />{ type }</p>
         </div>
     );

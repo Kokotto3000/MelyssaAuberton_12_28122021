@@ -15,4 +15,22 @@ body {
   font-weight: 500;
   font-size: 2.4rem;
   line-height: 2.4rem;
+  min-height: 100vh;
+  /*min-height: 100vh;
+  max-height: 1024px;*/
+}
+
+.warning {
+  padding: 2rem;
+}
+
+.warning p{
+  font-size: 2rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .warning {
+    display: none;
+  }
 }
