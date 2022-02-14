@@ -49,7 +49,7 @@ Recommended text editor : [Visual Studio Code](https://code.visualstudio.com).
 
 ## Configuration
 
-- (instructions to choose between API and Mocked Data)
+- To choose between the API data or mocked data, go to src/services/SwitchService.js and change new FetchApiData() to new FetchMockedData().
 
 - To switch between the two available user profiles (12 or 18), the two URL are :
 
