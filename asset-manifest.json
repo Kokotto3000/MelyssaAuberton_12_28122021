@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.87e4aae2.css",
-    "main.js": "/static/js/main.f4963206.js",
+    "main.css": "/static/css/main.cd30f278.css",
+    "main.js": "/static/js/main.fdb200a1.js",
     "static/media/logo.svg": "/static/media/logo.837414860efdf652f26ae7be654e06c5.svg",
     "static/media/swim.svg": "/static/media/swim.e26dba434236828a108a786d8215cd31.svg",
     "static/media/cycle.svg": "/static/media/cycle.d516c0e89dbb3aaab23afac6a130ca06.svg",
@@ -12,11 +12,11 @@
     "static/media/yoga.svg": "/static/media/yoga.6c31a2775a609d06fd5d99eb347250ed.svg",
     "static/media/calories-icon.svg": "/static/media/calories-icon.5db5a3aff9bd8f441f49792782c8262e.svg",
     "static/media/bodybuilding.svg": "/static/media/bodybuilding.4fe7fb9fe3554121b3d42dcb489eefd0.svg",
-    "main.87e4aae2.css.map": "/static/css/main.87e4aae2.css.map",
-    "main.f4963206.js.map": "/static/js/main.f4963206.js.map"
+    "main.cd30f278.css.map": "/static/css/main.cd30f278.css.map",
+    "main.fdb200a1.js.map": "/static/js/main.fdb200a1.js.map"
   },
   "entrypoints": [
-    "static/css/main.87e4aae2.css",
-    "static/js/main.f4963206.js"
+    "static/css/main.cd30f278.css",
+    "static/js/main.fdb200a1.js"
   ]
 }
