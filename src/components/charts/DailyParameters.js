@@ -41,15 +41,59 @@ function DailyParameters({ id }) {
             </div>
 
             <ResponsiveContainer className='daily-parameters_chart'>              
-                <BarChart data={userActivity.sessions} barGap={8} barSize={7} >                  
-                    <CartesianGrid strokeDasharray="3 3" vertical={ false } />
-                    <XAxis dataKey="day" tickLine={false} />
-                    <YAxis yAxisId="kilogram" orientation="right" axisLine={ false } tickLine={ false } ticks={ userActivity.ticks } domain={['dataMin', 'dataMax']} />
-                    <YAxis yAxisId="calories" orientation="left" axisLine={ false } tickLine={ false } hide={true} domain={['dataMin - 100', 'dataMax + 100']}/>
+                <BarChart 
+                    data={userActivity.sessions} 
+                    barGap={8} 
+                    barSize={7}
+                    margin={{
+                        top: 0,
+                        right: -30,
+                        left: 10,
+                        bottom: 0,
+                      }}
+                >                  
+                    <CartesianGrid 
+                        strokeDasharray="3 3" 
+                        vertical={ false } 
+                    />
+                    <XAxis 
+                        dataKey="day" 
+                        tickLine={false} 
+                        /*scale="point" 
+                        padding={{ left: 10, right: 10 }}*/
+                    />
+                    <YAxis 
+                        yAxisId="kilogram" 
+                        orientation="right" 
+                        axisLine={ false } 
+                        tickLine={ false } 
+                        ticks={ userActivity.ticks } 
+                        domain={['dataMin', 'dataMax']} 
+                    />
+                    <YAxis 
+                        yAxisId="calories" 
+                        orientation="left" 
+                        axisLine={ false } 
+                        tickLine={ false } 
+                        hide={true} 
+                        domain={['dataMin - 100', 'dataMax + 100']}
+                    />
                     
                     <Tooltip content={<CustomTooltip />} />
-                    <Bar yAxisId="kilogram" name="Poids (kg)" dataKey="kilogram" fill="#282D30"  radius={[ 20, 20, 0, 0 ]} />
-                    <Bar yAxisId="calories" name="Calories brulées (kCal)" dataKey="calories" fill="#E60000"  radius={[ 20, 20, 0, 0 ]} />                                   
+                    <Bar 
+                        yAxisId="kilogram" 
+                        name="Poids (kg)" 
+                        dataKey="kilogram" 
+                        fill="#282D30"  
+                        radius={[ 20, 20, 0, 0 ]} 
+                    />
+                    <Bar 
+                        yAxisId="calories" 
+                        name="Calories brulées (kCal)" 
+                        dataKey="calories" 
+                        fill="#E60000"  
+                        radius={[ 20, 20, 0, 0 ]} 
+                    />                                   
                 </BarChart>
             </ResponsiveContainer>            
         </div>

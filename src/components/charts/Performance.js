@@ -42,15 +42,22 @@ function Performance({ id }) {
             <ResponsiveContainer className='performance_chart'>
                 <RadarChart
                     outerRadius="60%" 
-                    data={ userPerformance.data }>
-                <PolarGrid />
-                <PolarAngleAxis className="performance_chart-subject" dataKey="kind" />
-                <Radar name="Thomas" dataKey="value" fill="red" fillOpacity={0.7} />
+                    data={ userPerformance.data }
+                >
+                    <PolarGrid />
+                    <PolarAngleAxis 
+                        className="performance_chart-subject" 
+                        dataKey="kind" 
+                    />
+                    <Radar 
+                        name="Thomas" 
+                        dataKey="value" 
+                        fill="red" 
+                        fillOpacity={0.7} 
+                    />
                 </RadarChart>
             </ResponsiveContainer>
         </div>
-        
-        
     );
 }
 

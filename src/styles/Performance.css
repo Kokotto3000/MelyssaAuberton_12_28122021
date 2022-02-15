@@ -2,13 +2,6 @@
     background: #282D30;    
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
-    /*flex-basis: 30%;
-    height: 100%;
-    min-height: 26rem;
-    max-height: 30rem;
-    max-width: 30rem;*/
-    /*grid-column: 3 / 5;
-    grid-row: 6 / 9;   */
     grid-area: 3 / 2 / 5 / 3;     
 }
 

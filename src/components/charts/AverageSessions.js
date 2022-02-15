@@ -48,19 +48,33 @@ function AverageSessions({ id }) {
 
     return(
         <div className='sessions'>
-            <h2>Durée moyenne des sessions</h2>
+            <h2>Durée moyenne<br />des sessions</h2>
             <ResponsiveContainer className='sessions_chart'>
                 <LineChart
-                // height={ 100 }
-                  data={ userAverageSessions.sessions }
-                  margin={{ top: 0, right: -1, left: -1, bottom: 0 }}
+                    data={ userAverageSessions.sessions }
+                    margin={{ top: 0, right: -1, left: -1, bottom: 0 }}
                 >
-                    {/* <CartesianGrid strokeDasharray="1" horizontal="" vertical=""/> */}
                     <XAxis
-                    dataKey="day" tickLine={false} axisLine={false} interval={0} maxTickGap={5} hide={true}/>
-                    <YAxis domain={["dataMin - 30", "dataMax + 30"]} hide={true} />
+                        dataKey="day" 
+                        tickLine={false} 
+                        axisLine={false} 
+                        interval={0} 
+                        maxTickGap={5} 
+                        hide={true}
+                    />
+                    <YAxis 
+                        domain={["dataMin - 30", "dataMax + 30"]} 
+                        hide={true} 
+                    />
                     <Tooltip content={<CustomTooltip />} />
-                    <Line type="natural" dataKey="sessionLength" stroke="rgba(255, 255, 255, 0.6)" strokeWidth={3} dot={false} activeDot={{ stroke: '#FFFFFF33', strokeWidth: 10, r: 5 }} />
+                    <Line 
+                        type="natural" 
+                        dataKey="sessionLength" 
+                        stroke="rgba(255, 255, 255, 0.6)" 
+                        strokeWidth={3} 
+                        dot={false} 
+                        activeDot={{ stroke: '#FFFFFF33', strokeWidth: 10, r: 5 }} 
+                    />
                 </LineChart>
             </ResponsiveContainer>
             <div className="sessions_xAxis">
@@ -77,7 +91,6 @@ function AverageSessions({ id }) {
 function CustomTooltip({ active, payload }){
   
     if(active){
-      // console.log(payload[0].payload.sessionLength)
         return(
             <div className="sessions_tooltip">
                 <p>{ payload[0].payload.sessionLength } min</p>

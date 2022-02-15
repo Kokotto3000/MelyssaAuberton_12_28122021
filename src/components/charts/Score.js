@@ -19,12 +19,8 @@ function Score({ score }) {
         <div className='score'>
             <h2>Score</h2>
 
-            <ResponsiveContainer className='score_chart'>         
-
-                <PieChart 
-                    // className="score-chart" 
-                    // width={250}
-                    // height={200}
+            <ResponsiveContainer className='score_chart'> 
+                <PieChart
                     background={ true }
                     data={ data }
                     margin={{ top: 30, right: 10, left: 10, bottom: 10 }}
