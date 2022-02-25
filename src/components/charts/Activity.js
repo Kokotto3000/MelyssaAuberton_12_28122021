@@ -1,5 +1,5 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import '../../styles/DailyParameters.css';
+import '../../styles/Activity.css';
 import React, { useEffect, useState } from 'react';
 import { PropTypes } from 'prop-types';
 import switchService from '../../services/SwitchService';
@@ -10,7 +10,7 @@ import switchService from '../../services/SwitchService';
  * @returns user daily parameters bar chart
  */
 
-function DailyParameters({ id }) {
+function Activity({ id }) {
 
     const [ userActivity, setUserActivity ]= useState({});
 
@@ -23,16 +23,15 @@ function DailyParameters({ id }) {
                 throw error;
             }
             setUserActivity(data);
-            }
-        )
+        })
         .catch(error=> {
             console.log(error);            
         })
     }, [id]);
 
     return(
-        <div className='daily-parameters'>
-            <div className='daily-parameters_title'>
+        <div className='activity'>
+            <div className='activity_title'>
                 <h2>Activité quotidienne</h2>
                 <ul>
                     <li>Poids (kg)</li>
@@ -40,7 +39,7 @@ function DailyParameters({ id }) {
                 </ul>
             </div>
 
-            <ResponsiveContainer className='daily-parameters_chart'>              
+            <ResponsiveContainer className='activity_chart'>              
                 <BarChart 
                     data={userActivity.sessions} 
                     barGap={8} 
@@ -103,7 +102,7 @@ function DailyParameters({ id }) {
 function CustomTooltip({ active, payload }){
     if(active){
         return (
-            <div className="daily-parameters_tooltip">
+            <div className="activity_tooltip">
                 <p>{ payload[0].payload.kilogram }kg</p>
                 <p>{ payload[0].payload.calories }Kcal</p>
             </div>
@@ -112,8 +111,8 @@ function CustomTooltip({ active, payload }){
     return null;
 }
 
-DailyParameters.propTypes = {
+Activity.propTypes = {
     id: PropTypes.number.isRequired
 };
 
-export default DailyParameters;
+export default Activity;

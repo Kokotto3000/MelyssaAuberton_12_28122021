@@ -32,8 +32,8 @@ export default class UserActivity{
         /**
          * 
          * @param {object} this.sessions
-         * @param {array} this.ticks
-         * @returns this.ticks to format Y ticks in userActivity graph
+         * @param {Array} this.ticks empty by default
+         * @returns custom ticks for userActivity graph
          */
 
         const kilograms= [];

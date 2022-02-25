@@ -4,11 +4,15 @@ import {
     USER_AVERAGE_SESSIONS,
     USER_PERFORMANCE
 } from "../../datas/mockedDatas";
-
 import UserDatas from "../../models/UserDatas";
 import UserActivity from "../../models/UserActivity";
 import UserPerformance from "../../models/UserPerformance";
 import UserAverageSessions from "../../models/UserAverageSessions";
+
+/**
+ * @class
+ * @classdesc Fetch mocked data from local file MockedDatas.js
+ */
 
 export default class FetchData{
 

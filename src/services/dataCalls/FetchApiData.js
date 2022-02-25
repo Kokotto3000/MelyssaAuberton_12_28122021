@@ -5,6 +5,12 @@ import UserAverageSessions from "../../models/UserAverageSessions";
 
 const url= "http://localhost:3000/user/";
 
+/**
+ * @class
+ * @classdesc Fetch data from API. Has 4 methods corresponding to the API's 4 endpoints
+ * This way, API calls are done outside of React Components
+ */
+
 export default class FetchData{
 
     constructor(id){

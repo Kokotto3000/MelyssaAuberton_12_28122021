@@ -1,3 +1,7 @@
+/**
+* @param {object} data average sessions data
+**/
+
 export default class UserAverageSessions{
     constructor(data){
         this.id= data.userId;
@@ -6,6 +10,12 @@ export default class UserAverageSessions{
     }
 
     setUpSessions(){
+
+        /**
+         * 
+         * @param {object} this.sessions
+         * @returns {object} format days to equal the first letter of the days of the week
+         */
         
         const days = { 1: 'L', 2: 'M', 3: 'M', 4: 'J', 5: 'V', 6: 'S', 7: 'D' };
 

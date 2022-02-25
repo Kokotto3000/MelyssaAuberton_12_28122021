@@ -1,3 +1,7 @@
+/**
+* @param {object} data user general info
+**/
+
 export default class UserDatas{
     constructor(data){
         this.id= data.id;

@@ -1,3 +1,7 @@
+/**
+* @param {object} data performance data
+**/
+
 export default class UserPerformance{
     constructor(data){
         this.id= data.userId;
@@ -7,6 +11,14 @@ export default class UserPerformance{
     }
 
     setUpData(){
+
+        /**
+         * 
+         * @param {object} this.data
+         * @param {object} this.kind
+         * @returns {object} translate from english to french
+         */
+
         for(let i= 0; i < this.data.length; i++){
             this.data[i].kind= this.kind[i+1];
             switch(this.data[i].kind){

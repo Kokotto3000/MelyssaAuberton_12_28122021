@@ -1,4 +1,4 @@
-.daily-parameters{
+.activity{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -11,40 +11,40 @@
     grid-area: 1 / 1 / 3 / 4;
 }
 
-.daily-parameters_chart{
+.activity_chart{
     max-height: 70%;
 }
 
-.daily-parameters_title{
+.activity_title{
     display: flex;
     justify-content: space-between;    
     align-items: center;
 }
 
-.daily-parameters_title ul{
+.activity_title ul{
     display: flex;
     color: #74798C;
     font-size: 1.4rem;
     list-style: none;
 }
 
-.daily-parameters_title li{
+.activity_title li{
     display: flex;
     align-items: center;
 }
 
-.daily-parameters_title li::before{
+.activity_title li::before{
     content: "•"; 
     color: red;
     font-size: 3rem;
     padding: 1rem;
 }
 
-.daily-parameters_title li:first-child::before{
+.activity_title li:first-child::before{
     color: #282D30;
 }
 
-.daily-parameters_tooltip{
+.activity_tooltip{
     background-color: red;
     color: white;
     font-size: .7rem;

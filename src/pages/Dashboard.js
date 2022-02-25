@@ -1,6 +1,6 @@
 import '../styles/Dashboard.css';
 import Banner from "../components/Banner";
-import DailyParameters from "../components/charts/DailyParameters";
+import Activity from "../components/charts/Activity";
 import AverageSessions from "../components/charts/AverageSessions";
 import Performance from "../components/charts/Performance";
 import Score from "../components/charts/Score";
@@ -62,7 +62,7 @@ function Dashboard() {
             
             <div className="dashboard_main">
 
-                <DailyParameters id={ userIdInt } />
+                <Activity id={ userIdInt } />
                     
                 <AverageSessions id={ userIdInt } />
                 <Performance id={ userIdInt } />
