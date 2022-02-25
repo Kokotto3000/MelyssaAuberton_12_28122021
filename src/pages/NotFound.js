@@ -16,8 +16,9 @@ function NotFound() {
             
 
             <Link to="/12" className="not-found_link">
-                Essayer plutôt avec ce compte...
+                Essayer plutôt avec le compte de Karl...
             </Link>
+
         </section>            
     );
 }

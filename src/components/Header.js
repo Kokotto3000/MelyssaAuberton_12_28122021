@@ -15,7 +15,7 @@ function Header() {
             </Link>
             
             <nav className="header_nav">
-                <Link className="header_nav-link" to="/id">Accueil</Link>
+                <Link className="header_nav-link" to="/id/accueil">Accueil</Link>
                 <Link className="header_nav-link" to="/id/profil">Profil</Link>
                 <Link className="header_nav-link" to="/id/reglage">Réglage</Link>
                 <Link className="header_nav-link" to="/id/communaute">Communauté</Link>

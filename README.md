@@ -11,6 +11,10 @@ Create the consumer dashboard of a sports analytics platform : SportSee, using [
 
 In this project, I used the chart library [Recharts](https://recharts.org/en-US/) to generate the charts.
 
+The application is under construction : 
+- navigation bars (principal and secondary) aren't working now
+- optimal resolution must be at least 1024*780px minimum.
+
 ## Prerequisites
 
 - You will need [Git](https://git-scm.com/) to clone the repository.

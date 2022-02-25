@@ -46,7 +46,7 @@ export default class FetchData{
 
     fetchUserPerformance(){
         const data= USER_PERFORMANCE.filter(user => user.userId === this.id);
-        return Promise.resolve(new UserPerformance(data[0]))
+        return Promise.resolve(new UserPerformance(data[0]));
     }
 
     /**
