@@ -1,11 +1,11 @@
 import '../styles/Dashboard.css';
 import Banner from "../components/Banner";
-import DailyParameters from "../components/charts/DailyParameters";
+import Activity from "../components/charts/Activity";
 import AverageSessions from "../components/charts/AverageSessions";
 import Performance from "../components/charts/Performance";
 import Score from "../components/charts/Score";
 import InfosCard from "../components/InfosCard";
-import Loader from '../components/Loader';
+import Loader from './Loader';
 import calories from "../assets/calories-icon.svg";
 import protein from "../assets/protein-icon.svg";
 import carbs from "../assets/carbs-icon.svg";
@@ -63,7 +63,7 @@ function Dashboard() {
                 <div className="dashboard_main">
 
                     <div className='dashboard_charts'>
-                        <DailyParameters id={ userIdInt } />
+                        <Activity id={ userIdInt } />
                         <div className='dashboard_charts-trio'>
                             <AverageSessions id={ userIdInt } />
                             <Performance id={ userIdInt } />

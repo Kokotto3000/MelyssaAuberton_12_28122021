@@ -25,7 +25,7 @@ function Score({ score }) {
                     data={ data }
                     margin={{ top: 30, right: 10, left: 10, bottom: 10 }}
                 >
-                    
+
                     <Pie
                         data={ data }
                         dataKey= "value"
@@ -68,18 +68,18 @@ function Score({ score }) {
                         </tspan>
                         <tspan
                             x={ "50%" }
-                            y={ "60%" }
+                            y={ "59%" }
                             fill='#74798C'
                             fontWeight="normal"
-                            fontSize="2rem">
+                            fontSize="1.6rem">
                                 de votre
                         </tspan>
                         <tspan
                             x={"50%"}
-                            y={"70%"}
+                            y={"68%"}
                             fill='#74798C'
                             fontWeight="normal"
-                            fontSize="2rem">
+                            fontSize="1.6rem">
                                 objectif
                         </tspan>
                     </text>                

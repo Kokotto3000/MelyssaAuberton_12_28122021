@@ -19,7 +19,7 @@ function Activity({ id }) {
         ApiCall.fetchUserActivity()
         .then(data => {
             if(!data){                
-                const error= "data loading error";
+                const error= "activity data error";
                 throw error;
             }
             setUserActivity(data);

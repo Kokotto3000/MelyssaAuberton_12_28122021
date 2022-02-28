@@ -15,26 +15,20 @@ function Performance({ id }) {
     const [ userPerformance, setUserPerformance ]= useState({});
 
     useEffect(()=> {
-      // setDataLoading(true);
         const ApiCall= switchService(id);
         ApiCall.fetchUserPerformance()
         .then(data => {
             
             if(!data){                
-                // setIsError(true);
-                const error= "data loading error";
+                const error= "performance data error";
                 throw error;
             }
-            // setIsError(false);
             setUserPerformance(data);
             }
         )
         .catch(error=> {
             console.log(error);            
         })
-        // .finally(()=>{
-        //     setDataLoading(false);
-        // })
     }, [id]);
 
     return (

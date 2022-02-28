@@ -16,21 +16,14 @@ function AverageSessions({ id }) {
 
     const [ daysArray, setDaysArray]= useState([]);
 
-    // const [ isDataLoading, setDataLoading]= useState(false);
-
-    // const [ isError, setIsError ]= useState(true);
-
     useEffect(()=> {
-        // setDataLoading(true);
         const ApiCall= switchService(id);
         ApiCall.fetchUserAverageSessions()
         .then(data => {
             if(!data){                
-                // setIsError(true);
-                const error= "data loading error";
+                const error= "average sessions data error";
                 throw error;
             }
-            // setIsError(false);
             setUserAverageSessions(data);
             const days=[];
             for(const session of data.sessions){
@@ -41,9 +34,6 @@ function AverageSessions({ id }) {
         .catch(error=> {
             console.log(error);            
         })
-        // .finally(()=>{
-        //     setDataLoading(false);
-        // })
     }, [id]);
 
     return(
