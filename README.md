@@ -51,6 +51,11 @@ Recommended text editor : [Visual Studio Code](https://code.visualstudio.com).
 
 `npm start`
 
+If you are working on Mac, replace in package.json :
+- "start": "cross-env PORT=3001 react-scripts start"
+by
+- "start": "PORT=3001 react-scripts start" .
+
 ## Configuration
 
 - To choose between the API data or mocked data, go to src/services/SwitchService.js and change new FetchApiData() to new FetchMockedData().
