@@ -1,6 +1,7 @@
 .dashboard{
     margin: 3rem auto 8rem auto;
     padding: 0 3rem 0 3rem;
+    width: 80%;
 }
 
 .dashboard_main{
